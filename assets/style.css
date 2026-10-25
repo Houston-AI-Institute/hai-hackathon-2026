@@ -51,7 +51,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 112px; }
 main:focus { outline: none; }
 
 body {
@@ -101,6 +101,7 @@ li { margin-bottom: 0.35em; }
 /* Header */
 .site-header {
   position: sticky; top: 0; z-index: 50;
+  background: var(--bg);
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   -webkit-backdrop-filter: saturate(1.4) blur(8px);
   backdrop-filter: saturate(1.4) blur(8px);
@@ -343,4 +344,9 @@ details > *:last-child { margin-bottom: 14px; }
 pre {
   margin: 0 0 1em; padding: 10px 12px; overflow-x: auto;
   background: var(--mint); border: 1px solid var(--line); border-radius: 10px; font-size: 0.9rem;
+}
+
+/* Phones without JS: the nav stays open, so the header is too tall to stick. */
+@media (max-width: 899px) {
+  html:not(.js) .site-header { position: static; }
 }
