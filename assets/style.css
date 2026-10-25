@@ -250,7 +250,6 @@ main { display: block; }
 }
 .tag:first-child { margin-left: 0; }
 .tag-code { background: var(--gold-tint); color: var(--gold-ink); }
-.tag-age { background: var(--ink); color: var(--bg); }
 
 /* Tables */
 .table-wrap { overflow-x: auto; margin: 0 0 1.2em; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
