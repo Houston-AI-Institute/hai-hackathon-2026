@@ -33,9 +33,6 @@
 
 <section class="page-head">
   <div class="wrap">
-
-<section class="page-head">
-  <div class="wrap">
     <p class="eyebrow">Track 5 (Food Access &amp; Resource Navigation)</p>
     <h1>Where will food be needed next?</h1>
     <p><span class="tag tag-code">Some coding helps</span></p>
@@ -47,7 +44,7 @@
     <div class="grid grid-2">
       <div>
         <h2>The problem</h2>
-        <p>Food banks in the Houston area move millions of pounds of food each year to hundreds of pantries across many counties. When a hurricane, a freeze or a wave of job losses hits, need jumps fast, and not always in the usual places. Planners have to decide where to send trucks and mobile pantries before the full numbers come in. Build a tool that helps them see where need is likely to rise next, and where extra food should go.</p>
+        <p>Food banks in the Houston area send food to many partner agencies and pantries. When a hurricane, a freeze or a wave of job losses hits, need can jump fast, and not always in the usual places. Planners have to decide where to send extra food and mobile pantries before the full numbers come in. Build an early-warning tool that shows where need is likely to rise next month, and test it honestly on past months.</p>
       </div>
       <div>
         <h2>Who it's for</h2>
@@ -60,19 +57,23 @@
     <div class="grid grid-2">
       <div class="card">
         <h3>Build at minimum</h3>
-        <p>A forecast or early-warning view for Harris County and the counties around it (you choose the area and say why). It shows:</p>
+        <p>An early-warning view for 8 counties: Harris and the 7 counties that border it (Brazoria, Chambers, Fort Bend, Galveston, Liberty, Montgomery and Waller). Every team uses the same 8, so judges can compare. It shows:</p>
         <ul>
-          <li>which counties are likely to need more food next month, using public signals;</li>
-          <li>how sure the tool is.</li>
+          <li>which counties are most likely to see need go up next month, using public signals (public numbers like weekly unemployment claims, SNAP cases and disaster declarations);</li>
+          <li>a test on past months. Pick a month, use only data from before it, make your prediction, then check what really happened. Do this for every month from January 2023 to August 2025;</li>
+          <li>how your tool compares with a simple guess: "next month will be the same as last month." Show how often you beat it. If you don't, say so. That still counts;</li>
+          <li>how sure the tool is: a range for each county, based on how far off it was in your test.</li>
         </ul>
+        <p>What you check against: the change in SNAP cases. It's the only public monthly count for each county, so it's what you can test. It isn't the same as need (see <a href="#good-to-know">Good to know</a>).</p>
       </div>
       <div class="card">
         <h3>Stretch goals</h3>
         <ul>
-          <li>Suggest where to send a set number of extra mobile pantry visits, and explain each suggestion in plain language.</li>
-          <li>Plan simple delivery routes from a depot point you pick.</li>
+          <li>Suggest where to send 10 extra mobile pantry visits across the 8 counties, and explain each one in plain language.</li>
+          <li>Look closely at Hurricane Beryl (July 2024). Did your tool flag the right counties in time?</li>
+          <li>Add the newer months (September 2025 to now) from the SNAP dashboard.</li>
           <li>A "what if a hurricane hits next week" scenario.</li>
-          <li>Compare your forecast with what actually happened after a past storm (Harvey in 2017, Beryl in 2024).</li>
+          <li>Plan simple delivery routes from a public building you pick, like a county courthouse. Don't use a real food bank or pantry site.</li>
         </ul>
       </div>
     </div>
@@ -88,15 +89,16 @@
         <caption class="sr-only">Datasets for this challenge</caption>
         <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Official source</th></tr></thead>
         <tbody>
-          <tr><td data-label="Dataset">Texas SNAP cases by county, monthly</td><td data-label="What's in it">SNAP (food stamps) cases and eligible people by county. One Excel file per month (.xls or .xlsx), January 2022 to August 2025. From September 2025, an interactive dashboard instead. Older years by request to HHSC. Public (Texas Health and Human Services)</td><td data-label="Official source"><a href="https://www.hhs.texas.gov/about/records-statistics/data-statistics/supplemental-nutritional-assistance-program-snap-statistics" target="_blank" rel="noopener">Texas HHSC SNAP statistics<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">Texas SNAP cases by county, monthly</td><td data-label="What's in it">SNAP (food stamps) cases and eligible people by county. One Excel file per month (.xls or .xlsx), January 2022 to August 2025. From September 2025, an interactive dashboard instead (the latest month downloads as CSV). Older years by request to HHSC. Public (Texas Health and Human Services)</td><td data-label="Official source"><a href="https://www.hhs.texas.gov/about/records-statistics/data-statistics/supplemental-nutritional-assistance-program-snap-statistics" target="_blank" rel="noopener">Texas HHSC SNAP statistics<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">Weekly unemployment claims by county</td><td data-label="What's in it">New unemployment claims each week for every Texas county, January 2019 to about two weeks ago. One Excel file, with a row per week and a column per county. Public (Texas Workforce Commission)</td><td data-label="Official source"><a href="https://texaslmi.com/Home/PopularDownloads" target="_blank" rel="noopener">Texas LMI downloads (choose "UI Claims")<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Dataset">FEMA disaster declarations</td><td data-label="What's in it">One row per county per declared disaster, back to 1953 (counties from 1964). About 70,500 rows in all. API and CSV. Public (FEMA)</td><td data-label="Official source"><a href="https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2" target="_blank" rel="noopener">OpenFEMA dataset page<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries" target="_blank" rel="noopener">API<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Dataset">County unemployment, monthly</td><td data-label="What's in it">Labor force and unemployment by county, latest 14 months, in one ZIP file. Monthly county data back to 1990 through the BLS database tools. Public (US Bureau of Labor Statistics)</td><td data-label="Official source"><a href="https://www.bls.gov/lau/tables.htm" target="_blank" rel="noopener">BLS Local Area Unemployment tables<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Dataset">SNAP households by census tract</td><td data-label="What's in it">Share of households getting SNAP, by census tract (small areas of a few thousand people), 5-year estimates (table S2201). Public (US Census Bureau)</td><td data-label="Official source"><a href="https://data.census.gov/table/ACSST5Y2023.S2201" target="_blank" rel="noopener">Census table S2201<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">County unemployment, monthly</td><td data-label="What's in it">Labor force and unemployment by county, latest 14 months, in one ZIP file. Monthly county data back to 1990 through the BLS database tools or the free BLS API (no key needed). October 2025 is missing because of the government shutdown. Public (US Bureau of Labor Statistics)</td><td data-label="Official source"><a href="https://www.bls.gov/lau/tables.htm" target="_blank" rel="noopener">BLS Local Area Unemployment tables<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">SNAP households by census tract</td><td data-label="What's in it">Share of households getting SNAP, by census tract (small areas of a few thousand people), 5-year estimates (table S2201). Public (US Census Bureau)</td><td data-label="Official source"><a href="https://data.census.gov/table/ACSST5Y2024.S2201" target="_blank" rel="noopener">Census table S2201<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Dataset">Food access by census tract</td><td data-label="What's in it">Distance to large food stores, by 2010 census tract. Excel or ZIP. Formerly the Food Access Research Atlas, now called the 2019 Large Retailer Access Map. The same page has a newer 2025 map of stores that take SNAP, on 2020 tracts. Public (USDA Economic Research Service)</td><td data-label="Official source"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data" target="_blank" rel="noopener">USDA ERS download page<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Dataset">County food insecurity estimates</td><td data-label="What's in it">Food insecurity by county for 2024, from Feeding America's Map the Meal Gap 2026 interactive map. The full dataset needs a request form. Reuse terms not yet checked</td><td data-label="Official source"><a href="https://www.feedingamerica.org/research/map-the-meal-gap/by-county" target="_blank" rel="noopener">Map the Meal Gap by county<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://map.feedingamerica.org/" target="_blank" rel="noopener">Interactive map<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Dataset">County and tract boundaries</td><td data-label="What's in it">TIGER/Line shapefiles, for joining the data to a map. Public (US Census Bureau)</td><td data-label="Official source"><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target="_blank" rel="noopener">Census TIGER/Line files<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Dataset">Texas road network</td><td data-label="What's in it">OpenStreetMap roads for routing, from the Geofabrik Texas extract (about 700 MB). ODbL license: credit "© OpenStreetMap contributors"</td><td data-label="Official source"><a href="https://download.geofabrik.de/north-america/us/texas.html" target="_blank" rel="noopener">Geofabrik Texas extract<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">License<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Dataset">Routing engine</td><td data-label="What's in it">OSRM, a free, open-source route planner that runs on OpenStreetMap data. BSD license</td><td data-label="Official source"><a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">Texas road network</td><td data-label="What's in it">OpenStreetMap roads, from the Geofabrik Texas extract (about 700 MB). Only needed if you run your own route planner. ODbL license: credit "© OpenStreetMap contributors"</td><td data-label="Official source"><a href="https://download.geofabrik.de/north-america/us/texas.html" target="_blank" rel="noopener">Geofabrik Texas extract<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">License<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">Routing engine</td><td data-label="What's in it">OSRM, a free, open-source route planner that runs on OpenStreetMap data. Its free demo server needs no setup: send no more than one request per second. BSD license</td><td data-label="Official source"><a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
         </tbody>
       </table>
     </div>
@@ -107,19 +109,23 @@
   <div class="wrap">
     <h2>Start here</h2>
     <ul>
-      <li>No code? Pick one month of SNAP cases, put Harris and the counties around it in Google Sheets, and chart how cases changed month by month.</li>
+      <li>No code? Download 12 monthly SNAP files, put the 8 counties in Google Sheets, and chart how cases changed month by month. Then add weekly unemployment claims for the same counties and look for jumps.</li>
       <li>New to Python? See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
     </ul>
 
-    <h2>Good to know</h2>
+    <h2 id="good-to-know">Good to know</h2>
     <details>
       <summary>About the data</summary>
       <ul>
-        <li>Real food bank shipments, routes and pantry stock aren't public. Use SNAP cases as a stand-in for need, and say so on your AI slide.</li>
+        <li>Real food bank shipments, routes and pantry stock aren't public, so you test against SNAP cases instead.</li>
+        <li>SNAP counts people who get benefits, not people who need food. Rule changes in 2025 made fewer people eligible. So SNAP cases can go down while need goes up, because people who lose SNAP often turn to food banks. Don't treat a drop in SNAP as a drop in need. Show which counties your tool might be missing, and say this on your "AI we used and how we checked it" slide.</li>
+        <li>Weekly unemployment claims are the freshest signal here, about two weeks behind. In Harris County they about tripled the week after Hurricane Beryl.</li>
+        <li>In your test, only use data that existed before the month you predict. Treat Census and Feeding America numbers as fixed background, not as monthly signals.</li>
         <li>If you make up pantry locations, trucks or stock, label them "made up" everywhere they appear.</li>
         <li>Small counties have small numbers, and a jump of a few hundred cases can look huge. Show how sure your tool is.</li>
-        <li>SNAP enrollment files are monthly Excel files, one file per month. Plan time to combine them.</li>
-        <li>The online SNAP files start in January 2022. For Harvey (2017), use other signals, like county unemployment.</li>
+        <li>The SNAP data is 44 monthly Excel files with different file names, and the dashboard months come in a different layout. Plan time to combine them.</li>
+        <li>Scripts: the HHSC site blocks scripts that pretend to be a web browser. Plain Python or curl works.</li>
+        <li>The Census API now needs a free key. Without one, use the download button on data.census.gov.</li>
         <li>Use only public data. No personal information.</li>
       </ul>
     </details>
@@ -130,7 +136,7 @@
     </details>
 
     <h2>How it's judged</h2>
-    <p>Same five criteria as every track. <a href="judging.html">How judging works</a></p>
+    <p>Same five criteria as every track. A strong demo shows your test on past months next to the "same as last month" guess, a range for each county (not just one number), and one county where your tool could be wrong, and why. The numbers come from the data, not from a chatbot. <a href="judging.html">How judging works</a></p>
   </div>
 </section>
 
