@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where will food be needed next? · HAI Hackathon 2026</title>
+<meta name="description" content="Track 5 challenge: help food bank planners see where need is likely to rise next, using public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<!-- HEADER:START -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#2c6d50"/><path d="M9 24V10M9 17h8M17 10v14M23 24l2-14" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="10" r="2.6" fill="#d29d41"/></svg><span class="brand-text">HAI Hackathon 2026<small>Houston AI Institute</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="true">Challenges</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="tools.html">Free AI tools</a></li>
+        <li><a href="submit.html">How to submit</a></li>
+        <li><a href="judging.html">Judging</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Track 5 (Food Access &amp; Resource Navigation)</p>
+    <h1>Where will food be needed next?</h1>
+    <p><span class="tag tag-code">Some coding helps</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <h2>The problem</h2>
+        <p>Food banks in the Houston area move millions of pounds of food each year to hundreds of pantries across many counties. When a hurricane, a freeze or a wave of job losses hits, need jumps fast, and not always in the usual places. Planners have to decide where to send trucks and mobile pantries before the full numbers come in. Build a tool that helps them see where need is likely to rise next, and where extra food should go.</p>
+      </div>
+      <div>
+        <h2>Who it's for</h2>
+        <p>Food bank staff who plan where food and mobile pantries go each month.</p>
+      </div>
+    </div>
+
+    <h2>What to build</h2>
+    <p>The minimum is a target, not a rule. Judges score every team with the same <a href="judging.html">five criteria</a>.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Build at minimum</h3>
+        <p>A forecast or early-warning view for Harris County and the counties around it (you choose the area and say why). It shows:</p>
+        <ul>
+          <li>which counties are likely to need more food next month, using public signals;</li>
+          <li>how sure the tool is.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Stretch goals</h3>
+        <ul>
+          <li>Suggest where to send a set number of extra mobile pantry visits, and explain each suggestion in plain language.</li>
+          <li>Plan simple delivery routes from a depot point you pick.</li>
+          <li>A "what if a hurricane hits next week" scenario.</li>
+          <li>Compare your forecast with what actually happened after a past storm (Harvey in 2017, Beryl in 2024).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="data">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="section-intro">Public data only, with no personal information. Links checked October 25, 2026.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <caption class="sr-only">Datasets for this challenge</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Official source</th><th scope="col">Our copy</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Dataset">Texas SNAP cases by county, monthly</td><td data-label="What's in it">SNAP (food stamps) cases and eligible people by county. One Excel file per month (.xls or .xlsx), January 2022 to August 2025. From September 2025, an interactive dashboard instead. Older years by request to HHSC. Public (Texas Health and Human Services)</td><td data-label="Official source"><a href="https://www.hhs.texas.gov/about/records-statistics/data-statistics/supplemental-nutritional-assistance-program-snap-statistics" target="_blank" rel="noopener">Texas HHSC SNAP statistics<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">FEMA disaster declarations</td><td data-label="What's in it">One row per county per declared disaster, back to 1953 (counties from 1964). About 70,500 rows in all. API and CSV. Public (FEMA)</td><td data-label="Official source"><a href="https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2" target="_blank" rel="noopener">OpenFEMA dataset page<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries" target="_blank" rel="noopener">API<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">None needed</td></tr>
+          <tr><td data-label="Dataset">County unemployment, monthly</td><td data-label="What's in it">Labor force and unemployment by county, latest 14 months, in one ZIP file. Monthly county data back to 1990 through the BLS database tools. Public (US Bureau of Labor Statistics)</td><td data-label="Official source"><a href="https://www.bls.gov/lau/tables.htm" target="_blank" rel="noopener">BLS Local Area Unemployment tables<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">SNAP households by census tract</td><td data-label="What's in it">Share of households getting SNAP, by census tract (small areas of a few thousand people), 5-year estimates (table S2201). Public (US Census Bureau)</td><td data-label="Official source"><a href="https://data.census.gov/table/ACSST5Y2023.S2201" target="_blank" rel="noopener">Census table S2201<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Food access by census tract</td><td data-label="What's in it">Distance to large food stores, by 2010 census tract. Excel or ZIP. Formerly the Food Access Research Atlas, now called the 2019 Large Retailer Access Map. The same page has a newer 2025 map of stores that take SNAP, on 2020 tracts. Public (USDA Economic Research Service)</td><td data-label="Official source"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data" target="_blank" rel="noopener">USDA ERS download page<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy"><a href="challenge-food-access.html#data">Same as the food help challenge</a></td></tr>
+          <tr><td data-label="Dataset">County food insecurity estimates</td><td data-label="What's in it">Food insecurity by county for 2024, from Feeding America's Map the Meal Gap 2026 interactive map. The full dataset needs a request form. Reuse terms not yet checked</td><td data-label="Official source"><a href="https://www.feedingamerica.org/research/map-the-meal-gap/by-county" target="_blank" rel="noopener">Map the Meal Gap by county<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://map.feedingamerica.org/" target="_blank" rel="noopener">Interactive map<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">None</td></tr>
+          <tr><td data-label="Dataset">County and tract boundaries</td><td data-label="What's in it">TIGER/Line shapefiles, for joining the data to a map. Public (US Census Bureau)</td><td data-label="Official source"><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target="_blank" rel="noopener">Census TIGER/Line files<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">None needed</td></tr>
+          <tr><td data-label="Dataset">Texas road network</td><td data-label="What's in it">OpenStreetMap roads for routing, from the Geofabrik Texas extract (about 700 MB). ODbL license: credit "© OpenStreetMap contributors"</td><td data-label="Official source"><a href="https://download.geofabrik.de/north-america/us/texas.html" target="_blank" rel="noopener">Geofabrik Texas extract<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">License<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">None needed</td></tr>
+          <tr><td data-label="Dataset">Routing engine</td><td data-label="What's in it">OSRM, a free, open-source route planner that runs on OpenStreetMap data. BSD license</td><td data-label="Official source"><a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">None needed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <ul>
+      <li>No code? Pick one month of SNAP cases, put Harris and the counties around it in Google Sheets, and chart how cases changed month by month.</li>
+      <li>New to Python? See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
+    </ul>
+
+    <h2>Good to know</h2>
+    <details>
+      <summary>About the data</summary>
+      <ul>
+        <li>Real food bank shipments, routes and pantry stock aren't public. Use SNAP cases as a stand-in for need, and say so on your AI slide.</li>
+        <li>If you make up pantry locations, trucks or stock, label them "made up" everywhere they appear.</li>
+        <li>Small counties have small numbers, and a jump of a few hundred cases can look huge. Show how sure your tool is.</li>
+        <li>SNAP enrollment files are monthly Excel files, one file per month. Plan time to combine them.</li>
+        <li>The online SNAP files start in January 2022. For Harvey (2017), use other signals, like county unemployment.</li>
+        <li>Use only public data. No personal information.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Planning routes</summary>
+      <p>Two datasets from the <a href="challenge-food-access.html#data">food help challenge</a> may help: <a href="https://data.census.gov/table/ACSDT5Y2024.B08201" target="_blank" rel="noopener">households without a car (Census table B08201)<span class="sr-only"> (opens in a new tab)</span></a> and <a href="https://www.fna.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">stores that take SNAP (USDA)<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+      <p>If you use OpenStreetMap roads, credit "© OpenStreetMap contributors".</p>
+    </details>
+
+    <h2>How it's judged</h2>
+    <p>Same five criteria as every track. <a href="judging.html">How judging works</a></p>
+  </div>
+</section>
+
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Houston AI Institute Hackathon 2026</strong> · Date, place and schedule: <a href="https://haihackathon.com/" target="_blank" rel="noopener">haihackathon.com<span class="sr-only"> (opens in a new tab)</span></a> · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
+    <p class="small">Last updated October 25, 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licenses.</p>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+</body>
+</html>
