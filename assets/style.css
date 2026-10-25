@@ -258,10 +258,11 @@ tr:last-child td { border-bottom: 0; }
 
 /* Phone: data tables become stacked cards so nothing scrolls sideways */
 @media (max-width: 767px) {
+  .stack, .stack tbody { display: block; }
   .stack thead { position: absolute; left: -9999px; }
   .stack tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
   .stack tr:last-child { border-bottom: 0; }
-  .stack td { display: block; border: 0; padding: 4px 14px; }
+  .stack td { display: block; border: 0; padding: 4px 14px; overflow-wrap: anywhere; }
   .stack td::before { content: attr(data-label); display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
   .stack td:first-child { font-weight: 700; }
 }
