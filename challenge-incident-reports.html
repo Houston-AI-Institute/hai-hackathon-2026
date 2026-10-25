@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn from offshore incident reports · HAI Hackathon 2026</title>
+<meta name="description" content="Optional Track 9 challenge: help a safety team learn from real offshore incident reports.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<!-- HEADER:START -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#2c6d50"/><path d="M9 24V10M9 17h8M17 10v14M23 24l2-14" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="10" r="2.6" fill="#d29d41"/></svg><span class="brand-text">HAI Hackathon 2026<small>Houston AI Institute</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracks.html" aria-current="page">Tracks</a></li>
+        <li><a href="data.html">All data</a></li>
+        <li><a href="judging.html">How judging works</a></li>
+        <li><a href="build.html">Build</a></li>
+        <li><a href="submit.html">How to submit</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Track 9 (Local Business &amp; Industry) · Optional</p>
+    <h1>Learn from offshore incident reports</h1>
+    <p><span class="tag tag-code">Some coding helps</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="note" role="note">
+      <p><strong>Before you open the data:</strong> Real offshore incident reports that describe workplace injuries. Under 18? Only if your parent or guardian said yes. It's still your choice, and you can work on another part of your team's project instead.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div>
+        <h2>The problem</h2>
+        <p>Offshore teams file hundreds of incident reports, but the lessons stay buried in free text. A safety team wants to learn from past incidents without reading every report by hand.</p>
+      </div>
+      <div>
+        <h2>Who it's for</h2>
+        <p>Safety teams in offshore oil and gas and other industries, who investigate incidents and try to stop them happening again.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Build at minimum</h3>
+        <p>A tool that helps a safety team learn from past incidents. Pick one:</p>
+        <ul>
+          <li>spot patterns in what caused incidents;</li>
+          <li>find similar past incidents for a new report;</li>
+          <li>flag reports that are missing key details.</li>
+        </ul>
+        <p>Then show honestly how well it works.</p>
+      </div>
+      <div class="card">
+        <h3>Stretch goals</h3>
+        <ul>
+          <li>Do more than one of the three.</li>
+          <li>Compare your results with the hand-checked labels in the <code>gold</code> folder, and say how many rows you checked.</li>
+          <li>Show the user why your tool gave each answer.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="data">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="section-intro">Built from public US federal offshore incident reports. Some cells are real report text and some are made up; every cell says which. The repo's README explains how.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <caption class="sr-only">Datasets for this challenge</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Official source</th><th scope="col">Our copy</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Dataset">Incident reports</td><td data-label="What's in it">About 1,200 incidents, with causes and recommendations, in CSV files. Real report text (US government, public domain) plus made-up fields that are marked. Code and added fields: MIT licence</td><td data-label="Official source"><a href="https://github.com/Houston-AI-Institute/psm-incident-ml" target="_blank" rel="noopener">psm-incident-ml on GitHub<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Hand-checked labels</td><td data-label="What's in it"><code>gold/</code> folder: cause labels checked by people for 360 rows, plus two smaller files. A head start for checking your results</td><td data-label="Official source"><a href="https://github.com/Houston-AI-Institute/psm-incident-ml/tree/main/gold" target="_blank" rel="noopener">gold folder on GitHub<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <ul>
+      <li>Slide template: [SLIDE TEMPLATE LINK]</li>
+      <li>Read "Read this before modelling" at the top of the repo's README. It will change what you build.</li>
+      <li>New to Python? See <a href="build.html#getting-started">open a Colab notebook and load a CSV</a>.</li>
+    </ul>
+
+    <h2>Good to know</h2>
+    <details>
+      <summary>Tips for honest results</summary>
+      <ul>
+        <li>The way investigators named causes changed over the years. Compare within one time period.</li>
+        <li>Report how many rows you tested on, not just a score.</li>
+        <li>Labels made by an AI model are not the truth. Check against the hand-checked labels.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>If the reports upset you</summary>
+      <p>You can stop reading at any time and talk to your mentor or a volunteer.</p>
+    </details>
+
+    <h2>How it's judged</h2>
+    <p>Same five criteria as every track. <a href="judging.html">How judging works</a></p>
+  </div>
+</section>
+
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Houston AI Institute Hackathon 2026</strong> · Sat 7 Nov · SmartCore Labs, Manvel TX · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
+    <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+</body>
+</html>

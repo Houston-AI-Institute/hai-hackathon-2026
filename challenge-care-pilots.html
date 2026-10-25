@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Which care facilities to approach first · HAI Hackathon 2026</title>
+<meta name="description" content="Track 9 challenge: use public Medicare data to rank Houston-area care facilities for a small home-safety company's pilots.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<!-- HEADER:START -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#2c6d50"/><path d="M9 24V10M9 17h8M17 10v14M23 24l2-14" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="10" r="2.6" fill="#d29d41"/></svg><span class="brand-text">HAI Hackathon 2026<small>Houston AI Institute</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracks.html" aria-current="page">Tracks</a></li>
+        <li><a href="data.html">All data</a></li>
+        <li><a href="judging.html">How judging works</a></li>
+        <li><a href="build.html">Build</a></li>
+        <li><a href="submit.html">How to submit</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Track 9 (Local Business &amp; Industry)</p>
+    <h1>Which care facilities to approach first</h1>
+    <p><span class="tag tag-code">Some coding helps</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <h2>The problem</h2>
+        <p>A small, non-medical home-safety company gets a patient's home ready before they leave a hospital, rehab hospital or nursing facility: grab bars, ramps, lighting and a safety check. It then supports the first weeks at home. The company wants 2 pilot programs with facilities, but has little time to sell. Which Houston-area facilities should it approach first, and why?</p>
+      </div>
+      <div>
+        <h2>Who it's for</h2>
+        <p>The company's owner, who decides where to spend selling time. And a facility's discharge planner, who would read the pitch.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Build at minimum</h3>
+        <ul>
+          <li>A ranked list (say, the top 15) from the data files. Rank one facility type at a time.</li>
+          <li>A score with weights you state. Signals could include: patients who live in the company's area, discharge-to-community rates, readmissions, volume, and chain size.</li>
+          <li>A plain-language "why" for each signal, with the file, column and time period it came from.</li>
+          <li>A short pitch draft for each of your top 3, using only numbers from the files.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Stretch goals</h3>
+        <ul>
+          <li>A map of where families might need help at home, by ZIP or census tract (for example, people 65+ living alone, older homes, mobility needs).</li>
+          <li>A list of home health agencies that could refer patients.</li>
+          <li>A question-and-answer helper that says when the files can't answer.</li>
+          <li>A fairness check: does your ranking skip areas with less access to care?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="data">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="section-intro">All public, facility-level or area-level data for Harris, Fort Bend, Brazoria, Galveston and Montgomery counties. No patient-level data and no names of people. Pulled 24 Oct 2026.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <caption class="sr-only">Datasets for this challenge</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Official source</th><th scope="col">Our copy</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Dataset">Hospital service areas, 2025</td><td data-label="What's in it"><code>hospital_service_area_2025.csv</code>, 20,526 rows. Medicare cases by hospital and patient home ZIP. Public, US government (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-summary-by-type-of-service/medicare-inpatient-hospitals/hospital-service-area" target="_blank" rel="noopener">CMS Hospital Service Area File<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Hospital general information</td><td data-label="What's in it"><code>hospital_general_info.csv</code>, 73 rows. Area hospitals: type, ownership, star rating. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/xubh-q36u" target="_blank" rel="noopener">CMS Provider Data xubh-q36u<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Hospital names, all states</td><td data-label="What's in it"><code>hospital_names_national.csv</code>, 5,419 rows. ID, name, city, state, type. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/xubh-q36u" target="_blank" rel="noopener">CMS Provider Data xubh-q36u<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Hospital readmissions</td><td data-label="What's in it"><code>hospital_readmissions_hrrp.csv</code>, 306 rows. Readmissions on 6 conditions. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/9n3s-kdb3" target="_blank" rel="noopener">CMS Provider Data 9n3s-kdb3<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Rehab hospital quality</td><td data-label="What's in it"><code>irf_provider_data.csv</code>, 2,145 rows. One row per facility per measure. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/v9e4-nwhh" target="_blank" rel="noopener">CMS Provider Data v9e4-nwhh<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Skilled nursing quality</td><td data-label="What's in it"><code>snf_qrp_provider_data.csv</code>, 8,493 rows. One row per facility per measure. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/fykj-qjee" target="_blank" rel="noopener">CMS Provider Data fykj-qjee<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Nursing home details</td><td data-label="What's in it"><code>nursing_homes_provider_info.csv</code>, 149 rows. Beds, residents per day, ownership type, chain. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/4pq5-n9py" target="_blank" rel="noopener">CMS Provider Data 4pq5-n9py<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Home health agencies</td><td data-label="What's in it"><code>home_health_agencies.csv</code>, 561 rows. Services and star rating. Addresses and phone numbers removed. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/6jpm-sxkc" target="_blank" rel="noopener">CMS Provider Data 6jpm-sxkc<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Home health ZIP codes</td><td data-label="What's in it"><code>home_health_zip_codes.csv</code>, 24,458 rows. Which agency serves which ZIP. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/provider-data/dataset/m5eg-upu5" target="_blank" rel="noopener">CMS Provider Data m5eg-upu5<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Medicare by county</td><td data-label="What's in it"><code>medicare_geographic_variation_county.csv</code>, 55 rows. County Medicare use, 2014 to 2024. Public (CMS)</td><td data-label="Official source"><a href="https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-geographic-comparisons/medicare-geographic-variation-by-national-state-county" target="_blank" rel="noopener">CMS Medicare Geographic Variation<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Older adults and housing, by tract</td><td data-label="What's in it"><code>acs_2024_tract_65plus_alone_housing_age.csv</code>, 1,562 rows. People 65+, 65+ living alone, median year homes were built. Public (US Census Bureau)</td><td data-label="Official source"><a href="https://censusreporter.org/" target="_blank" rel="noopener">Census Reporter<span class="sr-only"> (opens in a new tab)</span></a> (Census ACS 2020 to 2024)</td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Disability estimates, by tract</td><td data-label="What's in it"><code>cdc_places_tract_disability.csv</code>, 6,216 rows. Estimated % of adults with mobility and other disabilities. Public domain (CDC)</td><td data-label="Official source"><a href="https://www.cdc.gov/places/" target="_blank" rel="noopener">CDC PLACES<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <ul>
+      <li>Slide template: [SLIDE TEMPLATE LINK]</li>
+      <li>Read the README in the data folder first. It explains how the files join and what each measure means.</li>
+      <li>New to Python? See <a href="build.html#getting-started">open a Colab notebook and load a CSV</a>.</li>
+    </ul>
+
+    <h2>Good to know</h2>
+    <details>
+      <summary>Rules for this challenge</summary>
+      <ul>
+        <li>Don't contact facilities, agencies or the company. No calls, emails, visits or messages, during or after the event.</li>
+        <li>Don't add data about people: no staff names, online profile lookups or patient stories.</li>
+        <li>Pitch text uses only numbers from these files, with the source and time period. Don't invent results or reviews.</li>
+        <li>If your tool is asked something the files can't answer, it should say so.</li>
+        <li>Don't publish pitches or rankings that name facilities outside the event, and don't share this data pack after the event.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Reading the data</summary>
+      <ul>
+        <li>The files cover Original Medicare only. People in Medicare Advantage are not in most of them.</li>
+        <li>In the service-area file, <code>*</code> means 1 to 10 cases. Treat it as "small", not zero.</li>
+        <li>Time periods differ between files. Show the period next to every number you use.</li>
+        <li>Small facilities have wide uncertainty ranges. Two facilities whose ranges overlap may not really differ.</li>
+        <li>A measure is a reason to start a conversation, not proof that a facility needs or will buy anything.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>What strong tools usually do</summary>
+      <ul>
+        <li>Show the measure, the period, and any ties when they rank facilities.</li>
+        <li>Say so when the files can't answer a question, rather than guess.</li>
+        <li>Still answer questions the files can answer, even when they sound sensitive.</li>
+        <li>Use numbers in the pitch that anyone can find in the named file.</li>
+      </ul>
+    </details>
+
+    <h2>How it's judged</h2>
+    <p>Same five criteria as every track. <a href="judging.html">How judging works</a></p>
+  </div>
+</section>
+
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Houston AI Institute Hackathon 2026</strong> · Sat 7 Nov · SmartCore Labs, Manvel TX · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
+    <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+</body>
+</html>

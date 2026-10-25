@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find food help near you · HAI Hackathon 2026</title>
+<meta name="description" content="Track 5 challenge: help families find food resources nearby, understand eligibility and get there.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<!-- HEADER:START -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#2c6d50"/><path d="M9 24V10M9 17h8M17 10v14M23 24l2-14" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="10" r="2.6" fill="#d29d41"/></svg><span class="brand-text">HAI Hackathon 2026<small>Houston AI Institute</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracks.html" aria-current="page">Tracks</a></li>
+        <li><a href="data.html">All data</a></li>
+        <li><a href="judging.html">How judging works</a></li>
+        <li><a href="build.html">Build</a></li>
+        <li><a href="submit.html">How to submit</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Track 5 (Food Access &amp; Resource Navigation)</p>
+    <h1>Find food help near you</h1>
+    <p><span class="tag tag-code">Some coding helps</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <h2>The problem</h2>
+        <p>Families who need food help struggle to work out where to go, whether they qualify, and whether they can get there. Opening hours, transport, documents and language all get in the way. The information exists, but it's spread across many agencies.</p>
+      </div>
+      <div>
+        <h2>Who it's for</h2>
+        <p>Families in Harris, Fort Bend and Brazoria counties looking for food help, and the volunteers and caseworkers who help them.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Build at minimum</h3>
+        <p>A tool that:</p>
+        <ul>
+          <li>takes an address or ZIP code and shows nearby food resources (school and summer meal sites, SNAP stores, WIC offices, and the sample pantry list);</li>
+          <li>explains who qualifies, in plain language;</li>
+          <li>says how to get there by bus where it can;</li>
+          <li>says "I'm not sure" and points to 211 or the provider when it can't answer.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Stretch goals</h3>
+        <ul>
+          <li>Spanish, plus one more language.</li>
+          <li>Map areas that are far from food resources and poorly served by buses.</li>
+          <li>Filter by opening hours.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="data">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="section-intro">Public data only, with no personal information. File names and row counts come with the data pack.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <caption class="sr-only">Datasets for this challenge</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Official source</th><th scope="col">Our copy</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Dataset">School and summer meal sites</td><td data-label="What's in it">Texas school nutrition program sites, program year 2025 to 2026. Public (Texas Department of Agriculture)</td><td data-label="Official source"><a href="https://data.texas.gov/dataset/3qgy-p3sr" target="_blank" rel="noopener">Texas Open Data Portal 3qgy-p3sr<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Child and adult care meal sites</td><td data-label="What's in it">Centers in the Child and Adult Care Food Program. Public (Texas Department of Agriculture)</td><td data-label="Official source"><a href="https://data.texas.gov/dataset/py3b-tqc9" target="_blank" rel="noopener">Texas Open Data Portal py3b-tqc9<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Stores that take SNAP</td><td data-label="What's in it">SNAP retailer locations. Public (USDA)</td><td data-label="Official source"><a href="https://www.fns.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">USDA SNAP Retailer Locator<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Food access by area</td><td data-label="What's in it">How far census tracts are from food stores. Public (USDA)</td><td data-label="Official source"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas" target="_blank" rel="noopener">USDA Food Access Research Atlas<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Households without a car</td><td data-label="What's in it">Vehicles available per household (table B08201). Public (US Census Bureau)</td><td data-label="Official source"><a href="https://data.census.gov/table/ACSDT5Y2024.B08201" target="_blank" rel="noopener">Census table B08201<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Bus routes and stops</td><td data-label="What's in it">METRO's GTFS feed. Public; METRO's terms require you to credit METRO</td><td data-label="Official source"><a href="https://www.ridemetro.org/about/business-to-business/developer-portal" target="_blank" rel="noopener">METRO developer portal<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">WIC offices</td><td data-label="What's in it">Texas WIC office locations, copied by hand from public listings</td><td data-label="Official source"><a href="https://texaswic.org/" target="_blank" rel="noopener">Texas WIC<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Sample pantry list</td><td data-label="What's in it">A short list made by the event team: copied by hand from public listings, or marked as made up</td><td data-label="Official source">Made for this event</td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <ul>
+      <li>Slide template: [SLIDE TEMPLATE LINK]</li>
+      <li>New to Python? See <a href="build.html#getting-started">open a Colab notebook and load a CSV</a>.</li>
+    </ul>
+
+    <h2>Good to know</h2>
+    <details>
+      <summary>Ideas to try</summary>
+      <p>Test your tool with lookups like "a family of 4 with no car, Saturday morning" plus an address or ZIP. There's no single right answer. Show what your tool does, and where it isn't sure.</p>
+    </details>
+    <details>
+      <summary>Using the data</summary>
+      <ul>
+        <li>Say where every piece of data came from.</li>
+        <li>Credit METRO if you use the bus data.</li>
+        <li>Don't put anyone's personal information into your tool or into an AI tool.</li>
+        <li>Opening hours and rules change. Tell users to check with the provider.</li>
+      </ul>
+    </details>
+
+    <h2>How it's judged</h2>
+    <p>Same five criteria as every track. <a href="judging.html">How judging works</a></p>
+  </div>
+</section>
+
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Houston AI Institute Hackathon 2026</strong> · Sat 7 Nov · SmartCore Labs, Manvel TX · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
+    <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+</body>
+</html>
