@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>City of Manvel challenge · HAI Hackathon 2026</title>
-<meta name="description" content="City of Manvel challenge for tracks 1 to 4. Details come on Wednesday 4 November.">
+<title>Manvel resident questions · HAI Hackathon 2026</title>
+<meta name="description" content="Track 3 challenge: help Manvel residents find answers to permit and property questions in the city&#39;s published information, with sources.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script>document.documentElement.classList.add("js")</script>
@@ -19,11 +19,10 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tracks.html" aria-current="page">Tracks</a></li>
-        <li><a href="data.html">All data</a></li>
-        <li><a href="judging.html">How judging works</a></li>
-        <li><a href="build.html">Build</a></li>
+        <li><a href="index.html" aria-current="page">Challenges</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="tools.html">Free AI tools</a></li>
+        <li><a href="judging.html">Judging</a></li>
         <li><a href="submit.html">How to submit</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
@@ -35,22 +34,125 @@
 
 <section class="page-head">
   <div class="wrap">
-    <p class="eyebrow">Tracks 1 to 4</p>
-    <h1>City of Manvel challenge: details 4 November</h1>
-    <p class="lead">The City of Manvel is sharing a challenge for this hackathon. It will fit one or more of tracks 1 to 4. The full brief and any data come on Wednesday 4 November.</p>
+    <p class="eyebrow">Track 3 (Permitting &amp; Ordinance Assistant)</p>
+    <h1>Help Manvel residents find answers in the city's published information</h1>
+    <p><span class="tag tag-code">Some coding helps</span></p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <h2>Until then</h2>
+    <div class="grid grid-2">
+      <div>
+        <h2>The problem</h2>
+        <p>Manvel residents ask city staff the same questions again and again. Can I build on my lot? Can I split my land after I buy it? Is this a city rule or a county rule? The answers are already published, but they're spread across the city's website, the Code of Ordinances, permit forms, maps and Brazoria County's rules.</p>
+      </div>
+      <div>
+        <h2>Who it's for</h2>
+        <p>Manvel residents, including older residents, and small builders. Also the city's permitting staff, who answer these questions every day.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Build at minimum</h3>
+        <p>A tool that:</p>
+        <ul>
+          <li>answers common property and permit questions in plain language, using only the city's and county's published information;</li>
+          <li>shows the source for every answer, with a link;</li>
+          <li>says "I'm not sure" when it can't answer, and sends people to the city's <a href="https://www.cityofmanvel.com/593/Development-Services" target="_blank" rel="noopener">Development Services department<span class="sr-only"> (opens in a new tab)</span></a>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Stretch goals</h3>
+        <ul>
+          <li>Address lookup: is this address inside city limits, in the ETJ (the area just outside city limits), or only in the county?</li>
+          <li>Point people to the city's Development Guide for their kind of project.</li>
+          <li>Work by voice, like a phone call.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="data">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="section-intro">All of it is public, on the city's and county's own websites. Nothing to download from us.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <caption class="sr-only">Public sources for this challenge</caption>
+        <thead><tr><th scope="col">Source</th><th scope="col">What's in it</th><th scope="col">Link</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Source">Permits</td><td data-label="What's in it">When you need a permit, checklists for common projects, and links to forms and codes</td><td data-label="Link"><a href="https://www.cityofmanvel.com/410/Permits" target="_blank" rel="noopener">City of Manvel: Permits<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Permit forms</td><td data-label="What's in it">Every permit form, such as fence, pool, roofing, demolition and fill dirt</td><td data-label="Link"><a href="https://www.cityofmanvel.com/327/Available-Permit-Applications" target="_blank" rel="noopener">City of Manvel: Available Permit Applications<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Fee schedule</td><td data-label="What's in it">Fees for zoning, plats and building permits, adopted September 2026. It's a scanned PDF, so the text you copy out of it has errors. Check numbers against the page</td><td data-label="Link"><a href="https://www.cityofmanvel.com/DocumentCenter/View/2184" target="_blank" rel="noopener">City of Manvel: Fee Schedule (PDF)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Planning</td><td data-label="What's in it">Plats, splitting land, pre-development meetings and plat deadlines</td><td data-label="Link"><a href="https://www.cityofmanvel.com/404/Planning-Department" target="_blank" rel="noopener">City of Manvel: Planning<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Building codes</td><td data-label="What's in it">Which building codes the city uses</td><td data-label="Link"><a href="https://www.cityofmanvel.com/406/Building-and-Inspections-Department" target="_blank" rel="noopener">City of Manvel: Building and Inspections<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Code of Ordinances</td><td data-label="What's in it">The city's laws, including zoning and building rules. The online copy is current through May 2025</td><td data-label="Link"><a href="https://library.municode.com/tx/manvel/codes/code_of_ordinances" target="_blank" rel="noopener">Manvel Code of Ordinances on Municode<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Permit status</td><td data-label="What's in it">The city's permit portal, where people check a permit's status</td><td data-label="Link"><a href="https://public.mygov.us/manvel_tx" target="_blank" rel="noopener">City of Manvel permit portal (MyGov)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">City map</td><td data-label="What's in it">City limits, ETJ, zoning, parcels, subdivisions and flood zones (FEMA map from December 2020)</td><td data-label="Link"><a href="https://manvel.maps.arcgis.com/apps/webappviewer/index.html?id=388ffc32e47e4215a25f8a15fe556227" target="_blank" rel="noopener">City of Manvel GIS map<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Development map</td><td data-label="What's in it">Plat approvals, new commercial building and city projects</td><td data-label="Link"><a href="https://manvel.maps.arcgis.com/apps/dashboards/221fb007636241ad9e180e07351861bf" target="_blank" rel="noopener">City of Manvel Development Map<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">City plans</td><td data-label="What's in it">Comprehensive plan, future land use map and thoroughfare plan</td><td data-label="Link"><a href="https://www.cityofmanvel.com/617/Adopted-Development-Plans" target="_blank" rel="noopener">City of Manvel: Adopted Development Plans<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Development Guide</td><td data-label="What's in it">The city's guide for planning a project. It opens on a sign-in page that also offers a guest option</td><td data-label="Link"><a href="https://app.oncamino.com/manvel.tx/dashboard/submissions/new" target="_blank" rel="noopener">City of Manvel Development Guide<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">County development rules</td><td data-label="What's in it">Brazoria County's subdivision rules and plat checklists, for land outside city limits</td><td data-label="Link"><a href="https://www.brazoriacountytx.gov/departments/engineering/development" target="_blank" rel="noopener">Brazoria County: Development<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">County building and flood permits</td><td data-label="What's in it">Brazoria County building and floodplain permits, for land outside city limits</td><td data-label="Link"><a href="https://www.brazoriacountytx.gov/departments/floodplain/building-permits" target="_blank" rel="noopener">Brazoria County: Building Permits<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">County septic permits</td><td data-label="What's in it">Forms for septic systems (the county calls them OSSF)</td><td data-label="Link"><a href="https://www.brazoriacountytx.gov/departments/environmental-health/forms-permit-applications" target="_blank" rel="noopener">Brazoria County: Environmental Health forms<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="practice">
+  <div class="wrap">
+    <h2>Practice questions</h2>
+    <p class="section-intro">Written by the event team from the city's published pages. Not checked by city staff. Ask your tool these, then check its answers against the sources above.</p>
+    <ol>
+      <li>I want to put a shed in my backyard. Do I need a permit?</li>
+      <li>Do I need a permit to put up a fence?</li>
+      <li>How do I check on a permit I already applied for?</li>
+      <li>I bought 5 acres. Can I split off 1 acre so my daughter can build a house?</li>
+      <li>Is my house inside Manvel city limits, or just in Brazoria County?</li>
+      <li>What is my property zoned, and can I run a small business from home?</li>
+    </ol>
+    <div class="note">
+      <p><strong>On the day,</strong> judges ask every team's tool the same set of common resident questions. You won't see them in advance. A good answer is right, shows where it came from, and sends people to city staff when it should.</p>
+      <p>Some questions can't be answered from the published pages. Your tool should say so, not guess.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="wrap">
+    <h2>Start here</h2>
     <ul>
-      <li>Read the descriptions of <a href="tracks.html#track-1">tracks 1 to 4</a>.</li>
-      <li>Look through the <a href="data.html#open-tracks">public data ideas</a> for these tracks.</li>
+      <li>Slide template: [SLIDE TEMPLATE LINK]</li>
+      <li>No code? Add the city's pages and PDFs as sources in <a href="tools.html#gemini-notebook">Gemini Notebook</a> and ask it questions.</li>
+      <li>Writing code? Start with a few pages, not the whole website. Get answers with sources working first.</li>
     </ul>
 
+    <h2>Good to know</h2>
+    <details>
+      <summary>Using the data</summary>
+      <ul>
+        <li>Use only what the city and county publish. Don't make up rules.</li>
+        <li>Show the date of each source. Rules change, and the online code can be behind.</li>
+        <li>Be gentle with the city's website. Download each page or file once. Don't run tools that hit the site again and again.</li>
+        <li>Parcel data can show owners' names. Don't put names or anyone's personal information into your tool, your slides or an AI tool.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>What happens after the hackathon</summary>
+      <ul>
+        <li>Teams build one-day prototypes. The city doesn't host, support or guarantee anything built on the day.</li>
+        <li>Nothing is released under the city's name without the city's review.</li>
+        <li>Any decision about using an idea stays with the city.</li>
+      </ul>
+    </details>
+
     <h2>How it's judged</h2>
-    <p>Same five criteria as every track. <a href="judging.html">How judging works</a></p>
+    <p>Same five criteria as every track. For this challenge, judges also look at how right your tool's answers are, whether it shows the right sources, whether it sends people to staff when it should, and how easy it is for older residents to use. <a href="judging.html">How judging works</a></p>
   </div>
 </section>
 
@@ -58,7 +160,7 @@
 <!-- FOOTER:START -->
 <footer class="site-footer">
   <div class="wrap">
-    <p><strong>Houston AI Institute Hackathon 2026</strong> · Sat 7 Nov · SmartCore Labs, Manvel TX · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
+    <p><strong>Houston AI Institute Hackathon 2026</strong> · Date, place and schedule: <a href="https://haihackathon.com/" target="_blank" rel="noopener">haihackathon.com<span class="sr-only"> (opens in a new tab)</span></a> · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
     <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
   </div>
 </footer>

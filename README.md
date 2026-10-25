@@ -1,6 +1,6 @@
 # HAI Hackathon 2026: participant site
 
-The participant website for the Houston AI Institute Hackathon, Saturday 7 November 2026, at SmartCore Labs in Manvel, Texas.
+The participant guide for the Houston AI Institute Hackathon 2026: the challenges, where to get the data, free AI tools, and how to submit. Date, place and schedule are on https://haihackathon.com/.
 
 Live site: https://houston-ai-institute.github.io/hai-hackathon-2026/
 
