@@ -17,11 +17,11 @@ The shared header and footer are copied into each page by the maintainer before 
 
 To view it on your computer, open `index.html` in a browser, or run `python3 -m http.server` in this folder and go to http://localhost:8000.
 
-## Licence
+## License
 
 - Code (HTML structure, CSS, JavaScript): MIT. See `LICENSE`.
 - Site text: Creative Commons Attribution 4.0 (CC BY 4.0).
-- Not covered by either licence: text, data and logos supplied by partner organizations, and third-party data linked from the site, which keep their own terms.
+- Not covered by either license: text, data and logos supplied by partner organizations, and third-party data linked from the site, which keep their own terms.
 
 ## Contact
 

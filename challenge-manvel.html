@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manvel resident questions · HAI Hackathon 2026</title>
+<title>Help Manvel residents find answers · HAI Hackathon 2026</title>
 <meta name="description" content="Track 3 challenge: help Manvel residents find answers to permit and property questions in the city&#39;s published information, with sources.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
-<script>document.documentElement.classList.add("js")</script>
 <script src="assets/site.js" defer></script>
 </head>
 <body>
@@ -19,11 +18,11 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="index.html" aria-current="page">Challenges</a></li>
+        <li><a href="index.html" aria-current="true">Challenges</a></li>
         <li><a href="data.html">Data</a></li>
         <li><a href="tools.html">Free AI tools</a></li>
-        <li><a href="judging.html">Judging</a></li>
         <li><a href="submit.html">How to submit</a></li>
+        <li><a href="judging.html">Judging</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
     </nav>
@@ -36,7 +35,7 @@
   <div class="wrap">
     <p class="eyebrow">Track 3 (Permitting &amp; Ordinance Assistant)</p>
     <h1>Help Manvel residents find answers in the city's published information</h1>
-    <p><span class="tag tag-code">Some coding helps</span></p>
+    <p><span class="tag">No coding needed</span></p>
   </div>
 </section>
 
@@ -53,6 +52,7 @@
       </div>
     </div>
 
+    <h2>What to build</h2>
     <div class="grid grid-2">
       <div class="card">
         <h3>Build at minimum</h3>
@@ -86,12 +86,12 @@
         <tbody>
           <tr><td data-label="Source">Permits</td><td data-label="What's in it">When you need a permit, checklists for common projects, and links to forms and codes</td><td data-label="Link"><a href="https://www.cityofmanvel.com/410/Permits" target="_blank" rel="noopener">City of Manvel: Permits<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Source">Permit forms</td><td data-label="What's in it">Every permit form, such as fence, pool, roofing, demolition and fill dirt</td><td data-label="Link"><a href="https://www.cityofmanvel.com/327/Available-Permit-Applications" target="_blank" rel="noopener">City of Manvel: Available Permit Applications<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Source">Fee schedule</td><td data-label="What's in it">Fees for zoning, plats and building permits, adopted September 2026. It's a scanned PDF, so the text you copy out of it has errors. Check numbers against the page</td><td data-label="Link"><a href="https://www.cityofmanvel.com/DocumentCenter/View/2184" target="_blank" rel="noopener">City of Manvel: Fee Schedule (PDF)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Source">Planning</td><td data-label="What's in it">Plats, splitting land, pre-development meetings and plat deadlines</td><td data-label="Link"><a href="https://www.cityofmanvel.com/404/Planning-Department" target="_blank" rel="noopener">City of Manvel: Planning<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Fee schedule</td><td data-label="What's in it">Fees for zoning, plats and building permits, adopted September 2026. It's a scanned PDF (10 MB, 17 pages) that downloads instead of opening, and the text you copy out of it has errors. Check numbers against the page</td><td data-label="Link"><a href="https://www.cityofmanvel.com/DocumentCenter/View/2184" target="_blank" rel="noopener">City of Manvel: Fee Schedule (PDF)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Planning</td><td data-label="What's in it">Plats (maps that divide land into lots), splitting land, pre-development meetings and plat deadlines</td><td data-label="Link"><a href="https://www.cityofmanvel.com/404/Planning-Department" target="_blank" rel="noopener">City of Manvel: Planning<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Source">Building codes</td><td data-label="What's in it">Which building codes the city uses</td><td data-label="Link"><a href="https://www.cityofmanvel.com/406/Building-and-Inspections-Department" target="_blank" rel="noopener">City of Manvel: Building and Inspections<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Source">Code of Ordinances</td><td data-label="What's in it">The city's laws, including zoning and building rules. The online copy is current through May 2025</td><td data-label="Link"><a href="https://library.municode.com/tx/manvel/codes/code_of_ordinances" target="_blank" rel="noopener">Manvel Code of Ordinances on Municode<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">Code of Ordinances</td><td data-label="What's in it">The city's laws, including zoning and building rules. The online copy is current through May 2025. The site needs JavaScript, so simple scraping tools may get a blank page. Copy the sections you need by hand</td><td data-label="Link"><a href="https://library.municode.com/tx/manvel/codes/code_of_ordinances" target="_blank" rel="noopener">Manvel Code of Ordinances on Municode<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Source">Permit status</td><td data-label="What's in it">The city's permit portal, where people check a permit's status</td><td data-label="Link"><a href="https://public.mygov.us/manvel_tx" target="_blank" rel="noopener">City of Manvel permit portal (MyGov)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
-          <tr><td data-label="Source">City map</td><td data-label="What's in it">City limits, ETJ, zoning, parcels, subdivisions and flood zones (FEMA map from December 2020)</td><td data-label="Link"><a href="https://manvel.maps.arcgis.com/apps/webappviewer/index.html?id=388ffc32e47e4215a25f8a15fe556227" target="_blank" rel="noopener">City of Manvel GIS map<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Source">City map</td><td data-label="What's in it">City limits, ETJ (the area just outside city limits), zoning, parcels, subdivisions and flood zones (FEMA map from December 2020)</td><td data-label="Link"><a href="https://manvel.maps.arcgis.com/apps/webappviewer/index.html?id=388ffc32e47e4215a25f8a15fe556227" target="_blank" rel="noopener">City of Manvel GIS map<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Source">Development map</td><td data-label="What's in it">Plat approvals, new commercial building and city projects</td><td data-label="Link"><a href="https://manvel.maps.arcgis.com/apps/dashboards/221fb007636241ad9e180e07351861bf" target="_blank" rel="noopener">City of Manvel Development Map<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Source">City plans</td><td data-label="What's in it">Comprehensive plan, future land use map and thoroughfare plan</td><td data-label="Link"><a href="https://www.cityofmanvel.com/617/Adopted-Development-Plans" target="_blank" rel="noopener">City of Manvel: Adopted Development Plans<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
           <tr><td data-label="Source">Development Guide</td><td data-label="What's in it">The city's guide for planning a project. It opens on a sign-in page that also offers a guest option</td><td data-label="Link"><a href="https://app.oncamino.com/manvel.tx/dashboard/submissions/new" target="_blank" rel="noopener">City of Manvel Development Guide<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
@@ -104,7 +104,18 @@
   </div>
 </section>
 
-<section class="section" id="questions">
+<section class="section">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <ul>
+      <li>Slide template: [SLIDE TEMPLATE LINK]</li>
+      <li>No code needed: add the city's pages and PDFs as sources in <a href="tools.html#gemini-notebook">Gemini Notebook</a>, ask it the questions below, and check each answer against its source.</li>
+      <li>Writing code? Start with a few pages, not the whole website. Get answers with sources working first.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section band" id="questions">
   <div class="wrap">
     <h2>Questions residents ask</h2>
     <p class="section-intro">Written by the event team from the city's published pages. Not checked by city staff. Use them to build and test your tool, then check its answers against the sources above.</p>
@@ -122,7 +133,7 @@
       <li>Can I bring in fill dirt to raise my lot?</li>
       <li>Who approves a septic system?</li>
       <li>What is my property zoned, and can I run a small business from home?</li>
-      <li>My HOA said yes. Do I still need a city permit?</li>
+      <li>My HOA (homeowners association) said yes. Do I still need a city permit?</li>
       <li>Do I need a permit for solar panels?</li>
       <li>How long does it take to get a permit?</li>
       <li>Do I need a permit for a carport?</li>
@@ -134,15 +145,8 @@
   </div>
 </section>
 
-<section class="section band">
+<section class="section">
   <div class="wrap">
-    <h2>Start here</h2>
-    <ul>
-      <li>Slide template: [SLIDE TEMPLATE LINK]</li>
-      <li>No code? Add the city's pages and PDFs as sources in <a href="tools.html#gemini-notebook">Gemini Notebook</a> and ask it questions.</li>
-      <li>Writing code? Start with a few pages, not the whole website. Get answers with sources working first.</li>
-    </ul>
-
     <h2>Good to know</h2>
     <details>
       <summary>Using the data</summary>
@@ -172,7 +176,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p><strong>Houston AI Institute Hackathon 2026</strong> · Date, place and schedule: <a href="https://haihackathon.com/" target="_blank" rel="noopener">haihackathon.com<span class="sr-only"> (opens in a new tab)</span></a> · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
-    <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
+    <p class="small">Last updated October 25, 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licenses.</p>
   </div>
 </footer>
 <!-- FOOTER:END -->

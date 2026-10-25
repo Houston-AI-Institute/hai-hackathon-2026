@@ -7,7 +7,6 @@
 <meta name="description" content="Track 5 challenge: help families find food resources nearby, understand eligibility and get there.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
-<script>document.documentElement.classList.add("js")</script>
 <script src="assets/site.js" defer></script>
 </head>
 <body>
@@ -19,11 +18,11 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="index.html" aria-current="page">Challenges</a></li>
+        <li><a href="index.html" aria-current="true">Challenges</a></li>
         <li><a href="data.html">Data</a></li>
         <li><a href="tools.html">Free AI tools</a></li>
-        <li><a href="judging.html">Judging</a></li>
         <li><a href="submit.html">How to submit</a></li>
+        <li><a href="judging.html">Judging</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
     </nav>
@@ -53,6 +52,7 @@
       </div>
     </div>
 
+    <h2>What to build</h2>
     <div class="grid grid-2">
       <div class="card">
         <h3>Build at minimum</h3>
@@ -85,13 +85,13 @@
         <caption class="sr-only">Datasets for this challenge</caption>
         <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Official source</th><th scope="col">Our copy</th></tr></thead>
         <tbody>
-          <tr><td data-label="Dataset">School and summer meal sites</td><td data-label="What's in it">Texas school nutrition program sites, program year 2025 to 2026. Public (Texas Department of Agriculture)</td><td data-label="Official source"><a href="https://data.texas.gov/dataset/3qgy-p3sr" target="_blank" rel="noopener">Texas Open Data Portal 3qgy-p3sr<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
-          <tr><td data-label="Dataset">Child and adult care meal sites</td><td data-label="What's in it">Centers in the Child and Adult Care Food Program. Public (Texas Department of Agriculture)</td><td data-label="Official source"><a href="https://data.texas.gov/dataset/py3b-tqc9" target="_blank" rel="noopener">Texas Open Data Portal py3b-tqc9<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
-          <tr><td data-label="Dataset">Stores that take SNAP</td><td data-label="What's in it">SNAP retailer locations. Public (USDA)</td><td data-label="Official source"><a href="https://www.fna.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">USDA SNAP Retailer Locator<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
-          <tr><td data-label="Dataset">Food access by area</td><td data-label="What's in it">How far census tracts are from food stores. Public (USDA)</td><td data-label="Official source"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas" target="_blank" rel="noopener">USDA Food Access Research Atlas<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">School meal program sites</td><td data-label="What's in it">Texas school nutrition program sites, program year 2025 to 2026. Public (Texas Department of Agriculture). Includes staff contact names. Don't show or use them</td><td data-label="Official source"><a href="https://data.texas.gov/dataset/3qgy-p3sr" target="_blank" rel="noopener">Texas Open Data Portal 3qgy-p3sr<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Child and adult care meal sites</td><td data-label="What's in it">Centers in the Child and Adult Care Food Program. Public (Texas Department of Agriculture). Includes staff contact names. Don't show or use them</td><td data-label="Official source"><a href="https://data.texas.gov/dataset/py3b-tqc9" target="_blank" rel="noopener">Texas Open Data Portal py3b-tqc9<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Stores that take SNAP</td><td data-label="What's in it">Stores that accept SNAP (food stamps). Public (USDA)</td><td data-label="Official source"><a href="https://www.fna.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">USDA SNAP Retailer Locator<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Food access by area</td><td data-label="What's in it">How far census tracts (small areas of a few thousand people) are from food stores. Public (USDA)</td><td data-label="Official source"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas" target="_blank" rel="noopener">USDA Food Access Research Atlas<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
           <tr><td data-label="Dataset">Households without a car</td><td data-label="What's in it">Vehicles available per household (table B08201). Public (US Census Bureau)</td><td data-label="Official source"><a href="https://data.census.gov/table/ACSDT5Y2024.B08201" target="_blank" rel="noopener">Census table B08201<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
-          <tr><td data-label="Dataset">Bus routes and stops</td><td data-label="What's in it">METRO's GTFS feed. Public; METRO's terms require you to credit METRO</td><td data-label="Official source"><a href="https://www.ridemetro.org/about/business-to-business/developer-portal" target="_blank" rel="noopener">METRO developer portal<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
-          <tr><td data-label="Dataset">WIC offices</td><td data-label="What's in it">Texas WIC office locations, copied by hand from public listings</td><td data-label="Official source"><a href="https://texaswic.org/" target="_blank" rel="noopener">Texas WIC<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">Bus routes and stops</td><td data-label="What's in it">METRO's GTFS feed (a standard set of files with routes, stops and times). Public. You sign up on METRO's portal to download it, and METRO's terms require you to credit METRO</td><td data-label="Official source"><a href="https://www.ridemetro.org/about/business-to-business/developer-portal" target="_blank" rel="noopener">METRO developer portal<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
+          <tr><td data-label="Dataset">WIC offices</td><td data-label="What's in it">Texas WIC (food help for pregnant women, new moms and young children) office locations, copied by hand from public listings</td><td data-label="Official source"><a href="https://texaswic.org/" target="_blank" rel="noopener">Texas WIC<span class="sr-only"> (opens in a new tab)</span></a></td><td data-label="Our copy">[DRIVE LINK]</td></tr>
           <tr><td data-label="Dataset">Sample pantry list</td><td data-label="What's in it">A short list made by the event team: copied by hand from public listings, or marked as made up</td><td data-label="Official source">Made for this event</td><td data-label="Our copy">[DRIVE LINK]</td></tr>
         </tbody>
       </table>
@@ -104,6 +104,7 @@
     <h2>Start here</h2>
     <ul>
       <li>Slide template: [SLIDE TEMPLATE LINK]</li>
+      <li>No code? Open the meal site lists in Google Sheets, filter them by ZIP code, and show the results in slides or a simple page.</li>
       <li>New to Python? See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
     </ul>
 
@@ -132,7 +133,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p><strong>Houston AI Institute Hackathon 2026</strong> · Date, place and schedule: <a href="https://haihackathon.com/" target="_blank" rel="noopener">haihackathon.com<span class="sr-only"> (opens in a new tab)</span></a> · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
-    <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
+    <p class="small">Last updated October 25, 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licenses.</p>
   </div>
 </footer>
 <!-- FOOTER:END -->

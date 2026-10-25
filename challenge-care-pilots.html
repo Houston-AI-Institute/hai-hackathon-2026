@@ -7,7 +7,6 @@
 <meta name="description" content="Track 9 challenge: use public Medicare data to rank Houston-area care facilities for a small home-safety company's pilots.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
-<script>document.documentElement.classList.add("js")</script>
 <script src="assets/site.js" defer></script>
 </head>
 <body>
@@ -19,11 +18,11 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="index.html" aria-current="page">Challenges</a></li>
+        <li><a href="index.html" aria-current="true">Challenges</a></li>
         <li><a href="data.html">Data</a></li>
         <li><a href="tools.html">Free AI tools</a></li>
-        <li><a href="judging.html">Judging</a></li>
         <li><a href="submit.html">How to submit</a></li>
+        <li><a href="judging.html">Judging</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
     </nav>
@@ -49,16 +48,17 @@
       </div>
       <div>
         <h2>Who it's for</h2>
-        <p>The company's owner, who decides where to spend selling time. And a facility's discharge planner, who would read the pitch.</p>
+        <p>The company's owner, who decides where to spend selling time. And a facility's discharge planner (the staff member who arranges care when a patient goes home), who would read the pitch.</p>
       </div>
     </div>
 
+    <h2>What to build</h2>
     <div class="grid grid-2">
       <div class="card">
         <h3>Build at minimum</h3>
         <ul>
           <li>A ranked list (say, the top 15) from the data files. Rank one facility type at a time.</li>
-          <li>A score with weights you state. Signals could include: patients who live in the company's area, discharge-to-community rates, readmissions, volume, and chain size.</li>
+          <li>A score with weights you state. Signals could include: patients who live in the company's area, discharge-to-community rates (patients who go home, not to another facility), readmissions (patients back in hospital soon after leaving), volume, and chain size.</li>
           <li>A plain-language "why" for each signal, with the file, column and time period it came from.</li>
           <li>A short pitch draft for each of your top 3, using only numbers from the files.</li>
         </ul>
@@ -66,7 +66,7 @@
       <div class="card">
         <h3>Stretch goals</h3>
         <ul>
-          <li>A map of where families might need help at home, by ZIP or census tract (for example, people 65+ living alone, older homes, mobility needs).</li>
+          <li>A map of where families might need help at home, by ZIP or census tract (a small area of a few thousand people). For example: people 65+ living alone, older homes, mobility needs.</li>
           <li>A list of home health agencies that could refer patients.</li>
           <li>A question-and-answer helper that says when the files can't answer.</li>
           <li>A fairness check: does your ranking skip areas with less access to care?</li>
@@ -108,7 +108,7 @@
     <h2>Start here</h2>
     <ul>
       <li>Slide template: [SLIDE TEMPLATE LINK]</li>
-      <li>Read the README in the data folder first. It explains how the files join and what each measure means.</li>
+      <li>Read the README file that comes with the data first (the "Our copy" links above). It explains how the files join and what each measure means.</li>
       <li>New to Python? See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
     </ul>
 
@@ -153,7 +153,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p><strong>Houston AI Institute Hackathon 2026</strong> · Date, place and schedule: <a href="https://haihackathon.com/" target="_blank" rel="noopener">haihackathon.com<span class="sr-only"> (opens in a new tab)</span></a> · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
-    <p class="small">Last updated 25 October 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licences.</p>
+    <p class="small">Last updated October 25, 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licenses.</p>
   </div>
 </footer>
 <!-- FOOTER:END -->
