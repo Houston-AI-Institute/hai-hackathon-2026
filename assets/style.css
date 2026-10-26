@@ -251,6 +251,9 @@ main { display: block; }
 }
 .tag:first-child { margin-left: 0; }
 .tag-code { background: var(--gold-tint); color: var(--gold-ink); }
+.tag-partner { background: var(--btn-bg); color: var(--btn-ink); }
+#partner-challenges .card-title a { text-decoration: none; }
+#partner-challenges .card-title a:hover { text-decoration: underline; }
 
 /* Tables */
 .table-wrap { overflow-x: auto; margin: 0 0 1.2em; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
