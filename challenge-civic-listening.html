@@ -90,7 +90,7 @@
 <section class="section band" id="data">
   <div class="wrap">
     <h2>The data</h2>
-    <p class="section-intro">One set of files, built by HAI from public files on October 30, 2026. You can read it before the event; build your project on the day.</p>
+    <p class="section-intro">One set of files, built by HAI on November 1, 2026 from public files downloaded October 30. The code and method are public on <a href="https://github.com/Houston-AI-Institute/hfb-civic-data" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a> so anyone can check them. You can read it before the event; build your project on the day.</p>
     <div class="table-wrap">
       <table class="stack">
         <caption class="sr-only">Datasets for the food bank listening challenge</caption>
@@ -111,7 +111,7 @@
     <h2>Start here</h2>
     <ul>
       <li>No code? Open <code>zcta_civic.xlsx</code> in Google Sheets or Excel. Read the <code>read_me</code> sheet first. The not-ranked rows are already grey and sorted to the bottom.</li>
-      <li>Python? Row 1 of each CSV is a note on how the data may be used, so skip it, and keep ZIP codes as text: <code>pd.read_csv(path, skiprows=1, dtype={"ZCTA": str, "county_main": str})</code>. See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
+      <li>Python? Row 1 of each CSV is a note on how the data may be used, so skip it, and keep ZIP codes as text: <code>pd.read_csv(path, skiprows=1, dtype={"ZCTA": str, "county_main": str})</code>. See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>. The repo has a starter notebook (<code>starter/starter.ipynb</code>) that loads both files, builds an example score on ranked rows only and makes a shortlist you can change. <code>county_label</code> gives each row's county name.</li>
       <li>Start with the county table to see the whole region, then look at ZIP areas inside one county.</li>
     </ul>
 
@@ -124,9 +124,10 @@
         <li>Don't add outside contact lists, such as neighborhood association lists. They include people's names and emails.</li>
         <li>Your shortlist is for listening: focus groups and outreach conversations. Don't use it to choose where to run voter registration or get-out-the-vote.</li>
         <li>No prompt or AI output may guess race, ethnicity, citizenship or attitudes from area numbers.</li>
-        <li>Use the five neighborhood conditions as background only. Don't put them in your score or use them to group areas.</li>
+        <li>Use the five neighborhood conditions as background only. Don't put them in your score or use them to group areas. They track schooling and language closely, so a score built on them would describe who lives in an area, not how it takes part.</li>
         <li>Describe areas, not people. Don't call any area "disengaged", a "civic desert" or "underperforming".</li>
-        <li><strong>On your slides and in your live demo, use county views only.</strong> Your ZIP-level shortlist goes in your team folder for the food bank, where judges can open it. Presentations are recorded.</li>
+        <li><strong>On your slides and in your live demo, use county views only.</strong> You can show county P1 with its range, how many ZIP areas are ranked in each county, how many shortlist places fall in each county, your method and weights, and AI-drafted reasons with ZIP codes removed. List counties alphabetically, not by turnout. Don't show any ZIP code or ZIP area name. Presentations are recorded.</li>
+        <li>Your ZIP-level shortlist goes only in your team folder for the food bank, where judges can open it. Your code can be public, but keep the shortlist out of public repos, posts and slides. A ZIP shortlist made public loses points under Responsible use.</li>
       </ul>
     </details>
     <details>
@@ -136,7 +137,7 @@
         <li><code>P1_rank</code> runs from 0 to 100 among ranked ZIP areas. 100 means the highest share voted.</li>
         <li>The number of adult citizens comes from a survey, so it's an estimate. Each rank has a likely low and high (<code>rank_p05</code> and <code>rank_p95</code>), usually about 15 points apart. If two areas' ranges overlap, treat them as about the same.</li>
         <li>Voting districts and ZIP areas have different borders. HAI split each district's votes across ZIP areas based on where adults live. County totals are exact. ZIP numbers are estimates, least reliable in rural areas and in rows with the <code>SPLIT</code> caution flag.</li>
-        <li>P1 is above 1 in 5 rows. All 5 are not ranked: their populations are too small for the survey count of adults to be trusted. <code>GROWTH</code> is a different flag. It marks areas where 2024 registration is well above the 2020 adult population.</li>
+        <li><code>P1</code> is blank on every not-ranked row, so sorting or scoring on it only uses ranked rows. Where it can still be measured, the value is in <code>P1_unranked_reference</code>, for reference only. That value is above 1 in 5 rows, all not ranked: their populations are too small for the survey count of adults to be trusted. <code>GROWTH</code> is a different flag. It marks areas where 2024 registration is well above the 2020 adult population.</li>
       </ul>
     </details>
     <details>
