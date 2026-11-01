@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where should the food bank listen first? · HAI Hackathon 2026</title>
+<meta name="description" content="Track 5 partner challenge from the Houston Food Bank: help it choose where to hold focus groups and community conversations first, using public voting, Census and IRS data by ZIP area.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<!-- HEADER:START -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#2c6d50"/><path d="M9 24V10M9 17h8M17 10v14M23 24l2-14" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="10" r="2.6" fill="#d29d41"/></svg><span class="brand-text">HAI Hackathon 2026<small>Houston AI Institute</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="true">Challenges</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="tools.html">Free AI tools</a></li>
+        <li><a href="submit.html">How to submit</a></li>
+        <li><a href="judging.html">Judging</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Track 5 (Food Access &amp; Resource Navigation) · Houston Food Bank</p>
+    <h1>Where should the food bank listen first?</h1>
+    <p><span class="tag tag-partner">Partner challenge</span> <span class="tag">No coding needed</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="note" role="note">
+      <p><strong>Read this first.</strong> This data describes areas, never people. It is nonpartisan: turnout counts only, with no party, candidate or vote choice. It is not for food distribution, eligibility, pantry siting, decisions about any person, or choosing where to run voter registration or get-out-the-vote drives. A low score is not low interest. Missing data is not missing civic life.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div>
+        <h2>The problem</h2>
+        <p>The Houston Food Bank wants to hear from the communities it serves, through focus groups and outreach conversations across its 10 counties: Austin, Brazoria, Chambers, Fort Bend, Harris, Liberty, San Jacinto, Trinity, Walker and Waller. It can't be everywhere at once. Build a tool that helps it decide where to listen first, and explain each choice in plain language with the numbers behind it.</p>
+      </div>
+      <div>
+        <h2>Who it's for</h2>
+        <p>Food bank staff who plan focus groups and outreach conversations across the 10 counties.</p>
+      </div>
+    </div>
+
+    <h2>What to build</h2>
+    <p>The minimum is a target, not a rule. Judges score every team with the same <a href="judging.html">five criteria</a>. All of it works in a spreadsheet, so no coding is needed.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Build at minimum</h3>
+        <ul>
+          <li>Your own score. Pick up to 3 columns from the table, give each a weight, and say why. We suggest voter turnout (P1) counts for at least half, and civic organizations for a quarter or less.</li>
+          <li>Grey out the rows marked "not ranked", and mark the rows with a caution flag.</li>
+          <li>A shortlist of 8 places across at least 4 counties. Include both ends: places to "listen first" (lower measured participation) and places to "work with" (higher measured participation). Include both city and rural places.</li>
+          <li>A 2 to 3 line reason for each place, citing its numbers.</li>
+          <li><strong>The AI part:</strong> an AI assistant drafts each reason from that row's numbers. Your team checks every number against the table, and one slide shows a correction you made.</li>
+          <li>A one-page "how to read this" for food bank staff.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Stretch goals</h3>
+        <ul>
+          <li>Does your shortlist hold up with a second, different weighting? Show what changes.</li>
+          <li>Group ZIP areas into community types with neutral labels ("Type A", "Type B") and show the numbers behind each type.</li>
+          <li>An English and Spanish focus-group guide, adapted from a fixed, neutral template. AI may change only the logistics, the reading level and the language. A person on your team reviews every guide. <strong>TODO: template link to come.</strong></li>
+        </ul>
+        <h3>Team roles that work</h3>
+        <p>Data, score sheet, map, responsible use and focus-group guide, and pitch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="data">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="section-intro">One table, built by HAI from public files on October 30, 2026. <strong>Data opens Wednesday, November 4.</strong> You can read it before the event; build your project on the day.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <caption class="sr-only">Datasets for the food bank listening challenge</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Where to get it</th></tr></thead>
+        <tbody>
+          <!-- TODO: replace TODO-CIVIC-DATA-REPO with the real release URL once the repo exists. -->
+          <tr><td data-label="Dataset">ZIP area table</td><td data-label="What's in it">One row for each of the 240 ZIP areas (Census ZIP Code Tabulation Areas) that touch the 10 counties. 175 are ranked; 65 are shown but not ranked. Voter turnout in the 2022 and 2024 general elections compared with adult citizens (P1), registered voters, a count of civic organizations, and five neighborhood conditions from the Census. Excel (<code>zcta_civic.xlsx</code>, with a <code>read_me</code> sheet that defines every column) and CSV (<code>zcta_civic.csv</code>)</td><td data-label="Where to get it"><a href="https://github.com/Houston-AI-Institute/TODO-CIVIC-DATA-REPO/releases" target="_blank" rel="noopener">Download page on GitHub (opens Wednesday, November 4)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">County table</td><td data-label="What's in it">The same measure for each of the 10 counties (<code>county_civic.csv</code>, and the <code>county</code> sheet in the Excel file). Use it where ZIP areas are too small to score</td><td data-label="Where to get it">Same download</td></tr>
+          <tr><td data-label="Dataset">Map files</td><td data-label="What's in it">ZIP area shapes with the same columns (<code>zcta_civic.geojson</code>), and a ready-made map of P1 with not-ranked areas in grey (<code>zcta_p1_map.png</code>). The map is for your team folder, not your slides</td><td data-label="Where to get it">Same download</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Sources:<a href="https://data.capitol.texas.gov/" target="_blank" rel="noopener">Texas Legislative Council, Capitol Data Portal<span class="sr-only"> (opens in a new tab)</span></a> (<a href="https://opendefinition.org/licenses/cc-by/" target="_blank" rel="noopener">CC BY<span class="sr-only"> (opens in a new tab)</span></a>; shared out to ZIP areas by HAI, not a Texas Legislative Council product), the <a href="https://www.census.gov/programs-surveys/acs" target="_blank" rel="noopener">US Census Bureau American Community Survey<span class="sr-only"> (opens in a new tab)</span></a> 2020 to 2024 and 2020 Census, and the <a href="https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf" target="_blank" rel="noopener">IRS Exempt Organizations Business Master File<span class="sr-only"> (opens in a new tab)</span></a>. Credit these in your slides.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <ul>
+      <li>No code? Open <code>zcta_civic.xlsx</code> in Google Sheets or Excel. Read the <code>read_me</code> sheet first. The not-ranked rows are already grey and sorted to the bottom.</li>
+      <li>Python? Row 1 of each CSV is a use statement, so skip it, and keep ZIP codes as text: <code>pd.read_csv(path, skiprows=1, dtype={"ZCTA": str, "county_main": str})</code>. See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
+      <li>Start with the county table to see the whole region, then look at ZIP areas inside one county.</li>
+    </ul>
+
+    <h2 id="good-to-know">Good to know</h2>
+    <details>
+      <summary>Rules for this challenge</summary>
+      <ul>
+        <li>Areas, never people. Don't look up, match or name any person, voter or household.</li>
+        <li>Nonpartisan. Use only the turnout counts in this table. Don't add party, candidate, primary or vote-choice data, and don't download candidate files yourself.</li>
+        <li>Don't scrape neighborhood association lists. The City of Houston's list includes names and emails, so it was left out on purpose.</li>
+        <li>Your shortlist is for listening: focus groups and outreach conversations. It doesn't choose where to run voter registration or get-out-the-vote. That is the food bank's decision with its counsel.</li>
+        <li>No prompt or AI output may guess race, ethnicity, citizenship or attitudes from area numbers.</li>
+        <li>Describe areas, not people. Don't call any area "disengaged", a "civic desert" or "underperforming".</li>
+        <li><strong>On your slides, use county views only.</strong> Your ZIP-level shortlist goes in your team folder for the food bank, not on your slides. Presentations are recorded.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>What P1 means</summary>
+      <ul>
+        <li>P1 is the average of 2022 and 2024 general-election turnout, divided by adult citizens (minus adults held in correctional facilities). It's a reference measure, not a score of a community.</li>
+        <li><code>P1_rank</code> runs from 0 to 100 among ranked ZIP areas. 100 is the highest measured participation.</li>
+        <li>The adult citizen count is a survey estimate, so each rank has a range (<code>rank_p05</code> to <code>rank_p95</code>), about 15 points wide in a typical area. If two areas' ranges overlap, don't treat them as different.</li>
+        <li>Voting districts and ZIP areas don't line up, so each district's counts are shared out to ZIP areas by where adults live. County totals are exact. The ZIP split is an estimate, weakest where the <code>SPLIT</code> caution flag is set and in rural areas.</li>
+        <li>P1 can be above 1 in fast-growing areas, where 2024 voters outnumber the older survey estimate of adults. These rows have the <code>GROWTH</code> flag.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Why 65 ZIP areas aren't ranked</summary>
+      <ul>
+        <li>An area isn't ranked when the measure would mislead: less than half its land is in the 10 counties, much of its population lives outside them, it has fewer than 1,500 residents, it has no usable adult citizen estimate, or many residents live in group quarters or correctional facilities. The reason is in <code>not_ranked_reason</code>.</li>
+        <li>Not ranked is not low. These are areas the data can't describe well, not areas with low participation. Together they hold about 4 percent of the region's registered voters.</li>
+        <li>In Walker, Liberty and San Jacinto counties most ZIP areas are too small or cross county lines, so a ZIP ranking doesn't describe most of the county. Work at county level there.</li>
+        <li>Rows with a <code>caution</code> flag are ranked but need care. The <code>read_me</code> sheet explains each flag.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Civic organizations and neighborhood conditions</summary>
+      <ul>
+        <li><code>civic_orgs_n</code> counts IRS-registered community, neighborhood, service club and citizen participation groups. Homeowner and property owner associations are counted separately in <code>hoa_like_n</code>.</li>
+        <li>Groups are counted at their IRS mailing address, which may not be where they meet. Groups with PO box ZIP codes are lost. Churches, mutual aid groups, tenant groups and informal groups often don't file with the IRS, so they aren't counted.</li>
+        <li>There is no public neighborhood association list for the region outside the City of Houston.</li>
+        <li>77 ZIP areas show 0 civic organizations. That means none were found in this file, not that none exist.</li>
+        <li>The five neighborhood conditions (same house as a year ago, owner-occupied homes, high school diploma, households that aren't limited-English, broadband) are context only. They aren't in P1.</li>
+      </ul>
+    </details>
+
+    <h2>How it's judged</h2>
+    <p>Same five criteria as every track. A strong demo shows your score and why you weighted it that way, a county view of where to listen first and who to work with, the AI-drafted reasons with one correction your team caught, and an honest word on where the data is weak. <a href="judging.html">How judging works</a></p>
+  </div>
+</section>
+
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Houston AI Institute Hackathon 2026</strong> · Date, place and schedule: <a href="https://haihackathon.com/" target="_blank" rel="noopener">haihackathon.com<span class="sr-only"> (opens in a new tab)</span></a> · Questions: <a href="mailto:initiatives@houstonaiinstitute.com">initiatives@houstonaiinstitute.com</a></p>
+    <p class="small">Last updated November 1, 2026. Site text CC BY 4.0, code MIT. Partner text, data and logos are not covered by these licenses.</p>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+</body>
+</html>
