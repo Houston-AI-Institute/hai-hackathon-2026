@@ -27,8 +27,9 @@
   color-scheme: light dark;
 }
 
+/* Dark mode follows the device unless the visitor picks light or dark with the header switch. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --green: #7ccba2;
     --green-dark: #1b4130;
     --green-ink: #9fdcbb;
@@ -48,6 +49,27 @@
     --shadow: none;
   }
 }
+:root[data-theme="dark"] {
+  --green: #7ccba2;
+  --green-dark: #1b4130;
+  --green-ink: #9fdcbb;
+  --mint: #16281f;
+  --mint-2: #22392d;
+  --gold-ink: #f0c983;
+  --gold-tint: #33291a;
+  --ink: #e7efea;
+  --muted: #b3c2b9;
+  --line: #36503f;
+  --bg: #0e1a14;
+  --surface: #1a2e24;
+  --btn-bg: #7ccba2;
+  --btn-ink: #0e1a14;
+  --link: #9fdcbb;
+  --focus: #d29d41;
+  --shadow: none;
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -320,6 +342,7 @@ details > *:last-child { margin-bottom: 14px; }
 
 @media print {
   .site-header, .menu-toggle, .skip-link { position: static; }
+  .theme-toggle { display: none; }
   .site-footer { background: none; color: #000; }
 }
 
@@ -353,3 +376,34 @@ pre {
 @media (max-width: 899px) {
   html:not(.js) .site-header { position: static; }
 }
+
+/* Light/dark switch, last item in the nav. Hidden until site.js shows it. */
+.theme-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font: inherit; font-weight: 600; font-size: 0.95rem; cursor: pointer;
+}
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { background: var(--mint); }
+.theme-toggle svg { width: 18px; height: 18px; flex: none; }
+.theme-toggle[data-next="dark"] .icon-sun, .theme-toggle[data-next="light"] .icon-moon { display: none; }
+.theme-item { margin-left: 6px; }
+@media (max-width: 899px) {
+  .theme-item { margin: 6px 0 0; }
+}
+
+/* Partner logos sit on white tiles so they read in light and dark mode. */
+.logo-row { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 16px; }
+.logo-tile {
+  margin: 0; min-height: 84px; padding: 14px 22px;
+  display: flex; align-items: center; justify-content: center;
+  background: #ffffff; border: 1px solid var(--line); border-radius: 14px;
+}
+.logo-tile img { display: block; height: 48px; width: auto; max-width: 100%; }
+.logo-text { color: #1a1a1a; font-weight: 600; font-size: 1.05rem; }
+.card-logo, .challenge-logo { display: flex; width: max-content; max-width: 100%; background: #ffffff; }
+.card-logo { margin: 0 0 10px; padding: 6px 10px; border-radius: 8px; }
+.card-logo img { display: block; height: 30px; width: auto; }
+.challenge-logo { margin: 0 0 12px; padding: 8px 14px; border-radius: 10px; }
+.challenge-logo img { display: block; height: 36px; width: auto; }
