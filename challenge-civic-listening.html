@@ -136,7 +136,7 @@
         <li><code>P1_rank</code> runs from 0 to 100 among ranked ZIP areas. 100 means the highest share voted.</li>
         <li>The number of adult citizens comes from a survey, so it's an estimate. Each rank has a likely low and high (<code>rank_p05</code> and <code>rank_p95</code>), usually about 15 points apart. If two areas' ranges overlap, treat them as about the same.</li>
         <li>Voting districts and ZIP areas have different borders. HAI split each district's votes across ZIP areas based on where adults live. County totals are exact. ZIP numbers are estimates, least reliable in rural areas and in rows with the <code>SPLIT</code> caution flag.</li>
-        <li>P1 can be above 1 in fast-growing areas, where 2024 voters outnumber the older survey count of adults. These rows have the <code>GROWTH</code> flag.</li>
+        <li>P1 is above 1 in 5 rows. All 5 are not ranked: their populations are too small for the survey count of adults to be trusted. <code>GROWTH</code> is a different flag. It marks areas where 2024 registration is well above the 2020 adult population.</li>
       </ul>
     </details>
     <details>
