@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Where should the food bank listen first? · HAI Hackathon 2026</title>
-<meta name="description" content="Track 5 partner challenge from the Houston Food Bank: help it choose where to hold focus groups and community conversations first, using public voting, Census and IRS data by ZIP area.">
+<meta name="description" content="Track 5 partner challenge from the Houston Food Bank: help it choose where to hold focus groups and community conversations first, using public voter turnout counts, Census and IRS data by ZIP area.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%232c6d50'/%3E%3Ccircle cx='25' cy='10' r='3' fill='%23d29d41'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/site.js" defer></script>
@@ -42,13 +42,13 @@
 <section class="section">
   <div class="wrap">
     <div class="note" role="note">
-      <p><strong>Read this first.</strong> This data describes areas, never people. It is nonpartisan: turnout counts only, with no party, candidate or vote choice. It is not for food distribution, eligibility, pantry siting, decisions about any person, or choosing where to run voter registration or get-out-the-vote drives. A low score is not low interest. Missing data is not missing civic life.</p>
+      <p><strong>Read this first.</strong> This data is about places, never people. It counts how many people voted, not who they voted for. Use it only to choose where to listen. Don't use it to decide who gets food, where to put a pantry, anything about a person, or where to sign up voters or get out the vote. A low number doesn't mean people there don't care. A blank cell means the data is missing.</p>
     </div>
 
     <div class="grid grid-2">
       <div>
         <h2>The problem</h2>
-        <p>The Houston Food Bank wants to hear from the communities it serves, through focus groups and outreach conversations across its 10 counties: Austin, Brazoria, Chambers, Fort Bend, Harris, Liberty, San Jacinto, Trinity, Walker and Waller. It can't be everywhere at once. Build a tool that helps it decide where to listen first, and explain each choice in plain language with the numbers behind it.</p>
+        <p>The Houston Food Bank wants to hear from the communities it serves, through focus groups and outreach conversations across its 10 counties: Austin, Brazoria, Chambers, Fort Bend, Harris, Liberty, San Jacinto, Trinity, Walker and Waller. It can't be everywhere at once. Voter turnout is one rough sign of which communities are heard less often in public life, so places with lower turnout may be good places to listen first. Build a tool that helps it decide where to listen first, and explain each choice in plain language with the numbers behind it.</p>
       </div>
       <div>
         <h2>Who it's for</h2>
@@ -62,11 +62,11 @@
       <div class="card">
         <h3>Build at minimum</h3>
         <ul>
-          <li>Your own score. Pick up to 3 columns from the table, give each a weight, and say why. We suggest voter turnout (P1) counts for at least half, and civic organizations for a quarter or less.</li>
-          <li>Grey out the rows marked "not ranked", and mark the rows with a caution flag.</li>
+          <li>Your own score. Pick up to 3 columns: voter turnout (P1), civic organizations, and one more if you want, such as registered voters. Decide how much each one counts (its weight), and say why. We suggest P1 counts for at least half, and civic organizations for a quarter or less. Leave the five neighborhood conditions out of your score. They are background only.</li>
+          <li>Keep the not-ranked rows grey, and highlight every row that has a caution flag.</li>
           <li>A shortlist of 8 places across at least 4 counties. Include both ends: places to "listen first" (lower measured participation) and places to "work with" (higher measured participation). Include both city and rural places.</li>
           <li>A 2 to 3 line reason for each place, citing its numbers.</li>
-          <li><strong>The AI part:</strong> an AI assistant drafts each reason from that row's numbers. Your team checks every number against the table, and one slide shows a correction you made.</li>
+          <li><strong>The AI part:</strong> an AI assistant drafts each reason from that row's numbers. Your team checks every number against the table. One slide shows a correction you made, with the ZIP code and place name removed.</li>
           <li>A one-page "how to read this" for food bank staff.</li>
         </ul>
       </div>
@@ -74,11 +74,11 @@
         <h3>Stretch goals</h3>
         <ul>
           <li>Does your shortlist hold up with a second, different weighting? Show what changes.</li>
-          <li>Group ZIP areas into community types with neutral labels ("Type A", "Type B") and show the numbers behind each type.</li>
-          <li>An English and Spanish focus-group guide, adapted from a fixed, neutral template. AI may change only the logistics, the reading level and the language. A person on your team reviews every guide. <strong>TODO: template link to come.</strong></li>
+          <li>Group ZIP areas into community types using only P1 and civic organizations. Give them neutral labels ("Type A", "Type B") and show the numbers behind each type. Don't use the neighborhood conditions to make groups.</li>
+          <li>An English and Spanish focus-group guide, adapted from a fixed, neutral template. AI may change only the logistics, the reading level and the language. A person on your team reviews every guide. The template will be posted on this page before the event.</li>
         </ul>
         <h3>Team roles that work</h3>
-        <p>Data, score sheet, map, responsible use and focus-group guide, and pitch.</p>
+        <p>Five roles: data, score sheet, map, pitch, and one person for responsible use and the focus-group guide.</p>
       </div>
     </div>
   </div>
@@ -87,20 +87,19 @@
 <section class="section band" id="data">
   <div class="wrap">
     <h2>The data</h2>
-    <p class="section-intro">One table, built by HAI from public files on October 30, 2026. <strong>Data opens Wednesday, November 4.</strong> You can read it before the event; build your project on the day.</p>
+    <p class="section-intro">One set of files, built by HAI from public files on October 30, 2026. You can read it before the event; build your project on the day.</p>
     <div class="table-wrap">
       <table class="stack">
         <caption class="sr-only">Datasets for the food bank listening challenge</caption>
         <thead><tr><th scope="col">Dataset</th><th scope="col">What's in it</th><th scope="col">Where to get it</th></tr></thead>
         <tbody>
-          <!-- TODO: replace TODO-CIVIC-DATA-REPO with the real release URL once the repo exists. -->
-          <tr><td data-label="Dataset">ZIP area table</td><td data-label="What's in it">One row for each of the 240 ZIP areas (Census ZIP Code Tabulation Areas) that touch the 10 counties. 175 are ranked; 65 are shown but not ranked. Voter turnout in the 2022 and 2024 general elections compared with adult citizens (P1), registered voters, a count of civic organizations, and five neighborhood conditions from the Census. Excel (<code>zcta_civic.xlsx</code>, with a <code>read_me</code> sheet that defines every column) and CSV (<code>zcta_civic.csv</code>)</td><td data-label="Where to get it"><a href="https://github.com/Houston-AI-Institute/TODO-CIVIC-DATA-REPO/releases" target="_blank" rel="noopener">Download page on GitHub (opens Wednesday, November 4)<span class="sr-only"> (opens in a new tab)</span></a></td></tr>
+          <tr><td data-label="Dataset">ZIP area table</td><td data-label="What's in it">One row for each of the 240 ZIP areas (Census ZIP Code Tabulation Areas) that touch the 10 counties. 175 are ranked; 65 are shown but not ranked. Voter turnout in the 2022 and 2024 general elections compared with adult citizens (P1), registered voters, a count of civic organizations, and five neighborhood conditions from the Census. Excel (<code>zcta_civic.xlsx</code>, with a <code>read_me</code> sheet that defines every column) and CSV (<code>zcta_civic.csv</code>)</td><td data-label="Where to get it">Download link coming soon</td></tr>
           <tr><td data-label="Dataset">County table</td><td data-label="What's in it">The same measure for each of the 10 counties (<code>county_civic.csv</code>, and the <code>county</code> sheet in the Excel file). Use it where ZIP areas are too small to score</td><td data-label="Where to get it">Same download</td></tr>
           <tr><td data-label="Dataset">Map files</td><td data-label="What's in it">ZIP area shapes with the same columns (<code>zcta_civic.geojson</code>), and a ready-made map of P1 with not-ranked areas in grey (<code>zcta_p1_map.png</code>). The map is for your team folder, not your slides</td><td data-label="Where to get it">Same download</td></tr>
         </tbody>
       </table>
     </div>
-    <p>Sources:<a href="https://data.capitol.texas.gov/" target="_blank" rel="noopener">Texas Legislative Council, Capitol Data Portal<span class="sr-only"> (opens in a new tab)</span></a> (<a href="https://opendefinition.org/licenses/cc-by/" target="_blank" rel="noopener">CC BY<span class="sr-only"> (opens in a new tab)</span></a>; shared out to ZIP areas by HAI, not a Texas Legislative Council product), the <a href="https://www.census.gov/programs-surveys/acs" target="_blank" rel="noopener">US Census Bureau American Community Survey<span class="sr-only"> (opens in a new tab)</span></a> 2020 to 2024 and 2020 Census, and the <a href="https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf" target="_blank" rel="noopener">IRS Exempt Organizations Business Master File<span class="sr-only"> (opens in a new tab)</span></a>. Credit these in your slides.</p>
+    <p>Sources: <a href="https://data.capitol.texas.gov/" target="_blank" rel="noopener">Texas Legislative Council, Capitol Data Portal<span class="sr-only"> (opens in a new tab)</span></a> (<a href="https://opendefinition.org/licenses/cc-by/" target="_blank" rel="noopener">CC BY<span class="sr-only"> (opens in a new tab)</span></a>; shared out to ZIP areas by HAI, not a Texas Legislative Council product), the <a href="https://www.census.gov/programs-surveys/acs" target="_blank" rel="noopener">US Census Bureau American Community Survey<span class="sr-only"> (opens in a new tab)</span></a> 2020 to 2024 and 2020 Census, and the <a href="https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf" target="_blank" rel="noopener">IRS Exempt Organizations Business Master File<span class="sr-only"> (opens in a new tab)</span></a>. Credit these in your slides.</p>
   </div>
 </section>
 
@@ -109,7 +108,7 @@
     <h2>Start here</h2>
     <ul>
       <li>No code? Open <code>zcta_civic.xlsx</code> in Google Sheets or Excel. Read the <code>read_me</code> sheet first. The not-ranked rows are already grey and sorted to the bottom.</li>
-      <li>Python? Row 1 of each CSV is a use statement, so skip it, and keep ZIP codes as text: <code>pd.read_csv(path, skiprows=1, dtype={"ZCTA": str, "county_main": str})</code>. See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
+      <li>Python? Row 1 of each CSV is a note on how the data may be used, so skip it, and keep ZIP codes as text: <code>pd.read_csv(path, skiprows=1, dtype={"ZCTA": str, "county_main": str})</code>. See <a href="tools.html#colab">open a Colab notebook and load a CSV</a>.</li>
       <li>Start with the county table to see the whole region, then look at ZIP areas inside one county.</li>
     </ul>
 
@@ -119,28 +118,37 @@
       <ul>
         <li>Areas, never people. Don't look up, match or name any person, voter or household.</li>
         <li>Nonpartisan. Use only the turnout counts in this table. Don't add party, candidate, primary or vote-choice data, and don't download candidate files yourself.</li>
-        <li>Don't scrape neighborhood association lists. The City of Houston's list includes names and emails, so it was left out on purpose.</li>
-        <li>Your shortlist is for listening: focus groups and outreach conversations. It doesn't choose where to run voter registration or get-out-the-vote. That is the food bank's decision with its counsel.</li>
+        <li>Don't add outside contact lists, such as neighborhood association lists. They include people's names and emails.</li>
+        <li>Your shortlist is for listening: focus groups and outreach conversations. Don't use it to choose where to run voter registration or get-out-the-vote.</li>
         <li>No prompt or AI output may guess race, ethnicity, citizenship or attitudes from area numbers.</li>
+        <li>Use the five neighborhood conditions as background only. Don't put them in your score or use them to group areas.</li>
         <li>Describe areas, not people. Don't call any area "disengaged", a "civic desert" or "underperforming".</li>
-        <li><strong>On your slides, use county views only.</strong> Your ZIP-level shortlist goes in your team folder for the food bank, not on your slides. Presentations are recorded.</li>
+        <li><strong>On your slides and in your live demo, use county views only.</strong> Your ZIP-level shortlist goes in your team folder for the food bank, where judges can open it. Presentations are recorded.</li>
       </ul>
     </details>
     <details>
       <summary>What P1 means</summary>
       <ul>
-        <li>P1 is the average of 2022 and 2024 general-election turnout, divided by adult citizens (minus adults held in correctional facilities). It's a reference measure, not a score of a community.</li>
-        <li><code>P1_rank</code> runs from 0 to 100 among ranked ZIP areas. 100 is the highest measured participation.</li>
-        <li>The adult citizen count is a survey estimate, so each rank has a range (<code>rank_p05</code> to <code>rank_p95</code>), about 15 points wide in a typical area. If two areas' ranges overlap, don't treat them as different.</li>
-        <li>Voting districts and ZIP areas don't line up, so each district's counts are shared out to ZIP areas by where adults live. County totals are exact. The ZIP split is an estimate, weakest where the <code>SPLIT</code> caution flag is set and in rural areas.</li>
-        <li>P1 can be above 1 in fast-growing areas, where 2024 voters outnumber the older survey estimate of adults. These rows have the <code>GROWTH</code> flag.</li>
+        <li>P1 is the share of adult citizens who voted, averaged over the 2022 and 2024 November general elections. Adults held in jails or prisons are left out of the count.</li>
+        <li><code>P1_rank</code> runs from 0 to 100 among ranked ZIP areas. 100 means the highest share voted.</li>
+        <li>The number of adult citizens comes from a survey, so it's an estimate. Each rank has a likely low and high (<code>rank_p05</code> and <code>rank_p95</code>), usually about 15 points apart. If two areas' ranges overlap, treat them as about the same.</li>
+        <li>Voting districts and ZIP areas have different borders. HAI split each district's votes across ZIP areas based on where adults live. County totals are exact. ZIP numbers are estimates, least reliable in rural areas and in rows with the <code>SPLIT</code> caution flag.</li>
+        <li>P1 can be above 1 in fast-growing areas, where 2024 voters outnumber the older survey count of adults. These rows have the <code>GROWTH</code> flag.</li>
       </ul>
     </details>
     <details>
       <summary>Why 65 ZIP areas aren't ranked</summary>
       <ul>
-        <li>An area isn't ranked when the measure would mislead: less than half its land is in the 10 counties, much of its population lives outside them, it has fewer than 1,500 residents, it has no usable adult citizen estimate, or many residents live in group quarters or correctional facilities. The reason is in <code>not_ranked_reason</code>.</li>
-        <li>Not ranked is not low. These are areas the data can't describe well, not areas with low participation. Together they hold about 4 percent of the region's registered voters.</li>
+        <li>An area isn't ranked when its number would mislead. That happens when:
+          <ul>
+            <li>less than half its land is in the 10 counties;</li>
+            <li>many of its people live outside the 10 counties;</li>
+            <li>fewer than 1,500 people live there;</li>
+            <li>there's no usable count of adult citizens; or</li>
+            <li>many people live in group housing, such as dorms, nursing homes, jails or prisons.</li>
+          </ul>
+          The <code>not_ranked_reason</code> column says which one.</li>
+        <li>A not-ranked area doesn't have low turnout. The data just can't describe it well. Together these areas hold about 4 percent of the region's registered voters.</li>
         <li>In Walker, Liberty and San Jacinto counties most ZIP areas are too small or cross county lines, so a ZIP ranking doesn't describe most of the county. Work at county level there.</li>
         <li>Rows with a <code>caution</code> flag are ranked but need care. The <code>read_me</code> sheet explains each flag.</li>
       </ul>
@@ -157,7 +165,7 @@
     </details>
 
     <h2>How it's judged</h2>
-    <p>Same five criteria as every track. A strong demo shows your score and why you weighted it that way, a county view of where to listen first and who to work with, the AI-drafted reasons with one correction your team caught, and an honest word on where the data is weak. <a href="judging.html">How judging works</a></p>
+    <p>Same five criteria as every track. A strong demo shows your score and why you weighted it that way, a county view of where to listen first and places to work with, the AI-drafted reasons with one correction your team caught (ZIP code removed), and an honest word on where the data is weak. Judges can open your team folder to see the full shortlist. <a href="judging.html">How judging works</a></p>
   </div>
 </section>
 
