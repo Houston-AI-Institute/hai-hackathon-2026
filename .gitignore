@@ -1,0 +1,11 @@
+.claude/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.bak
+*.orig
+.vscode/
+.idea/
+__pycache__/
+.venv/
